@@ -9,13 +9,27 @@
 
 #questionbox {
   border: 4px black solid;
+
+  background-color: white;
 }
 
 .answerbox {
   border: 2px gray solid;
   margin-top: 1em;
+
+  background-color: white;
 }
 
 .answerbox p {
   margin: 0px;
 }
+
+/* luokat jotka asetetaan elementille kun vastaus on valittu */
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}
+
