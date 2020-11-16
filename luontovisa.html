@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Luontovisa</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/yhteinen.css">
+    <link rel="stylesheet" href="css/luontovisa.css">
 </head>
 
 <body>
@@ -45,8 +46,57 @@
                 </nav>
             </div>
         </header>
-        <section class="row mx-auto">
+        <section class="row mx-auto pb-5">
+            <div class="col-12 text-center mt-3">
+                <h3>Luontovisa</h3>
+                <div>
+                    <p>Tämä visa testaa tietämystäsi suomen luonnosta.</p>
+                </div>
+            </div>
+            <div class="col-2"></div>
+            <div id="quizapp-container" class="col-8 text-center border border-dark pr-2 pl-2 pb-2 pt-2">
+                <div id="aloitus" class="col-12">
+                    <button id="start-btn" type="button" class="btn btn-primary">Aloita</button>
+                </div>
+                <div id="question" class="hide">
+                    <p>This is a question</p>
+                </div>
 
+                <div id="vastaus" class="hide mt-2 mb-2 pl-1 pr-1 pb-2 pt-2">
+                    <p></p>
+                </div>
+                <div id="results">
+                    
+                </div>
+                <div id="kuva" class="hide">
+                    <figure>
+                      <img class="img-fluid" src="img/ahven-web.jpg" alt="">  
+                    </figure>
+                </div>
+                <div id="correct" class="hide">
+                    <h2></h2>
+                </div>
+                <div id="wrong" class="hide mt-2">
+                    <h2></h2>
+                </div>
+                <div id="answers" class="hide">
+                    <button id="answer-0" type="button" class=" answer col-12 btn btn-dark">1</button>
+                    <button id="answer-1" type="button" class=" answer col-12 btn btn-dark">2</button>
+                    <button id="answer-2" type="button" class=" answer col-12 btn btn-dark">3</button>
+                    <button id="answer-3" type="button" class=" answer col-12 btn btn-dark">4</button>
+                </div>
+                <div class="row">
+                    <div id="reset" class="col-12 hide">
+                        <button id="reset" type="button" class="btn btn-primary">Uudestaan</button>
+                    </div>
+                     
+               <div id="next" class="col-12 text-right hide">
+                        <button id="next-btn" type="button" class="btn btn-primary">Seuraava</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2"></div>
         </section>
         <footer class="row mx-auto">
 
@@ -61,6 +111,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+    <script src="js/luontovisa.js"></script>
 </body>
 
 </html>
