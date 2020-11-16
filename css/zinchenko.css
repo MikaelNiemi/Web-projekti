@@ -1,3 +1,5 @@
+/* Tekijä: Alina Zinchenko*/
+
 .questions {
     margin: 1em;
 }
@@ -13,4 +15,8 @@
 
 .väärin {
     background-color: #ff3333;
+}
+
+.piilossa {
+    display: none;
 }

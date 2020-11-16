@@ -18,7 +18,11 @@ $(document).ready(function () {
     // Kysymys 1 tarkistus: värit, vastaus selitys
     $("#tarkista1").click(function () {
 
-
+        if ($("#pysähdy1") === checked) {
+            $(this).parent().addClass("oikein");
+        } else {
+            $(this).parent().addClass("väärin");
+        }
 
 
     });
