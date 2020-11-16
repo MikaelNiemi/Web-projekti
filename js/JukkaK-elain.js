@@ -30,45 +30,77 @@ class Trivia {
   }
 }
 
-let chosen = false;
-let currentQ = null;
-let userAnswers = [];
+let valittu = false;
+let nykyinenKysymys = null;
+let syötetytVastaukset = [];
 
 // Kysymykset
-let Q0 = new Trivia("Mikä näistä eläimistä tykkää syödä salaattia?", 
-["Lehmä", "Kani", "Pöllö", "Rapu"], 1);
-let Q1 = new Trivia("Mikä näistä eläimistä on hitain?",
-["Kani", "Hevonen", "Tiikeri", "Etana"], 3);
+let kysymykset = [
+  new Trivia("Mikä näistä eläimistä tykkää syödä salaattia?", 
+  ["Lehmä", "Kani", "Pöllö", "Rapu"], 1),
+
+  new Trivia("Mikä näistä eläimistä on hitain?",
+  ["Kani", "Hevonen", "Tiikeri", "Etana"], 3),
+
+  new Trivia("Millä näistä eläimistä on koukkuja kielessä?",
+  ["Kissa", "Karhu", "Marsu", "Käärme"], 0),
+
+  new Trivia("Kuinka monta jalkaa on hämähäkillä?", 
+  ["Kaksi", "Kahdeksan", "Kymmenen", "Kuusi"], 1),
+
+  new Trivia("Millä eläimellä on piikkejä selässä?", 
+  ["Koira", "Susi", "Siili", "Tiikeri"], 2)
+];
 
 $(document).ready(function() {
-  currentQ = Q0;
-  $("#question").html(currentQ.question);
-  console.log(currentQ.answers.length);
-  for(let i = 0; i < currentQ.answers.length; i++) {
-    console.log(currentQ.answers[i]);
-    $("#answer" + i).html(currentQ.answers[i]);
+  uusiKysymys(kysymykset[0]);
+
+  // Syötä tiedot uudelle kysymykselle
+  function uusiKysymys(kysymys) {
+    nykyinenKysymys = kysymys;
+    $("#question").html(kysymys.question);
+    //console.log(kysymys.answers.length);
+    for(let i = 0; i < kysymys.answers.length; i++) {
+      //console.log(kysymys.answers[i]);
+      $("#answer" + i).html(kysymys.answers[i]);
+    }
+
+    $("#numero").html(kysymykset.indexOf(kysymys)+1);
   }
+  
 
   $(".answerbox").click(function() {
     // Etsi valitun vastauksen numero
     let id = Number($("p", this).attr("id").slice(-1));
-    if(!chosen) {
-      if(id === currentQ.correct) {
-        console.log("Correct");
+    if(!valittu) {
+      if(id === nykyinenKysymys.correct) {
+        //console.log("Correct");
         $(this).addClass("correct"); 
       } else {
         $(this).addClass("incorrect");
-        $("#answer"+currentQ.correct).parent().addClass("correct");
+        $("#answer"+nykyinenKysymys.correct).parent().addClass("correct");
       }
-      userAnswers.push(id);
+      syötetytVastaukset.push(id);
     } else { 
       return;
     }
-    chosen = true;
+    valittu = true;
   });
 
   $("#nextBtn").click(function() {
-    chosen = false;
+    valittu = false;
+    
+    if(nykyinenKysymys == kysymykset[0]) {
+      uusiKysymys(kysymykset[1]);
+    } else if(nykyinenKysymys == kysymykset[1]) {
+      uusiKysymys(kysymykset[2]);
+    } else if(nykyinenKysymys == kysymykset[2]) {
+      uusiKysymys(kysymykset[3]);
+    } else if(nykyinenKysymys == kysymykset[3]) {
+      uusiKysymys(kysymykset[4]);
+    } else if(nykyinenKysymys == kysymykset[4]) {
+      
+    }
     $(".answerbox").removeClass("correct");
     $(".answerbox").removeClass("incorrect");
   });
