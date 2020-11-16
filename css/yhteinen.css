@@ -12,6 +12,27 @@ main {
 }
 
 h1 {
-    color: #9c33ff;
+    color: #8080ff;
     font-weight: bold;
+    margin-top: 5px;
+}
+
+section {
+    background-color: #ccccff;
+    border-radius: 10px;
+}
+
+.navbar {
+    background-color: #8080ff !important;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.dropdown-menu {
+    background-color: #8080ff !important;
+}
+
+.nav-link,
+.dropdown-item {
+    color: gold !important;
 }
