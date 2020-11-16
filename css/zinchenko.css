@@ -1,3 +1,12 @@
 .questions {
     margin: 1em;
 }
+
+.oikein {
+    background-color: #47d147;
+    color: white;
+}
+
+.väärin {
+    background-color: #ff3333;
+}
