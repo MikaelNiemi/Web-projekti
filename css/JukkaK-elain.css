@@ -1,0 +1,21 @@
+#trivia {
+  border: 3px gray groove;
+  
+}
+
+#question {
+  padding-top: 2px;
+}
+
+#questionbox {
+  border: 4px black solid;
+}
+
+.answerbox {
+  border: 2px gray solid;
+  margin-top: 1em;
+}
+
+.answerbox p {
+  margin: 0px;
+}
