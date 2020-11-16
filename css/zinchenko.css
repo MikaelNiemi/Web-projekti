@@ -2,6 +2,10 @@
     margin: 1em;
 }
 
+.valittu {
+    font-weight: bold;
+}
+
 .oikein {
     background-color: #47d147;
     color: white;
