@@ -47,11 +47,12 @@
     <section class="row mx-auto mt-2">
       <div class="col-12 text-center">
         <h2 class="pt-2">Eläinvisa</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Ut lacinia pellentesque porta. Aenean quis orci nec quam varius euismod. 
-          Quisque scelerisque lacus libero, nec maximus leo tincidunt placerat. 
-          Nunc sapien metus, varius sed neque eu, molestie bibendum felis. 
-          In eu tellus luctus, hendrerit augue ac, ultrices erat. Visan lopussa näet
+        <p>Tämä eläinvisa on tarkoitettu noin 7-12 vuotiaille. 
+          Kun valitset vastauksen, vastauksen laatikko muuttuu eri väriseksi riippuen siitä,
+          onko vastaus oikein vai väärin. Jos vaustaksesi on väärin, näet vihreällä oikean vastauksen. 
+          Jos vaustauson oikein, laatikko muuttuu punaiseksi. Kun olet valinnut vastauksen,
+          voit painaa Seuraava-painiketta, jolloin näet seuraavan kysymyksen. Kun olet viimeisessä
+          kysymyksessä, painikkessa lukee 'Tulokset' josta painamalla pääset näkemään
           kaikki kysymykset ja niiden oikeat vastaukset, sekä selitykset.</p>
           <p>Vihreä = Oikea vastaus. Punainen = Väärä vastaus.</p>
 
@@ -78,9 +79,26 @@
         </div>
 
         <div class="row">
-          <button id="nextBtn" class="col-2 mx-auto mt-3">Seuraava</button>
+          <button id="nextBtn" disabled class="col-2 mx-auto mt-3">Seuraava</button>
         </div>
         <p class="col-2"><span id="numero">1</span>/5</p>
+
+        <div id="tulokset" class="row piilossa">
+          <p class="col">
+            Oikealla näet kaikkien kysymysten oikeat vastaukset ja sinun vastauksesi.
+            Alla näet selitykset oikeille vastauksille.
+            <br>
+            <br>Kysymys 1: Jäniksillä on oikeat hampaat salaatin syömistä varten.
+            <br>Kysymys 2: Etanat ovat hitaita, koska niillä on vain yksi jalka,
+                joka on yksi iso lihas ilman luita.
+            <br>Kysymys 3: Kissaeläimillä on koukkuja kielessä, jotta ne saavat
+                lihan irti saaliin luista.
+            <br>Kysymys 4: Hämähäkeillä on kahdeksan jalkaa, jotta ne pystyvät tarvittaessa
+                irroittamaan yhden tai kaksi ilman haittaa.
+            <br>Kysymys 5: Siilit suojautuvat hyökkäyksiltä piikkiensä avulla.
+          </p>
+          <p id="tulosLista" class="col"></p>
+        </div>
       </div>
 
 

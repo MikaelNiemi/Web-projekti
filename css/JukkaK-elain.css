@@ -33,3 +33,7 @@
   background-color: red;
 }
 
+/* Piilossa class */
+.piilossa {
+  display: none;
+}

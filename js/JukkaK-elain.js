@@ -1,35 +1,36 @@
 class Trivia {
-  constructor(question, answers, correct) {
-    this._question = question;
-    this._answers = answers;
-    this._correct = correct;
+  constructor(teksti, vastaukset, oikea) {
+    this._teksti = teksti;
+    this._vastaukset = vastaukset;
+    this._oikea = oikea;
   }
 
-  get question() {
-    return this._question;
+  get teksti() {
+    return this._teksti;
   }
 
-  set question(question) {
-    this._question = question;
+  set teksti(teksti) {
+    this._teksti = teksti;
   }
 
-  get answers() {
-    return this._answers;
+  get vastaukset() {
+    return this._vastaukset;
   }
 
-  set answers(answers) {
-    this._answers = answers;
+  set vastaukset(vastaukset) {
+    this._vastaukset = vastaukset;
   }
 
-  get correct() {
-    return this._correct;
+  get oikea() {
+    return this._oikea;
   }
 
-  set correct(correct) {
-    this._correct = correct;
+  set oikea(oikea) {
+    this._oikea = oikea;
   }
 }
 
+let loppu = false;
 let valittu = false;
 let nykyinenKysymys = null;
 let syötetytVastaukset = [];
@@ -37,10 +38,10 @@ let syötetytVastaukset = [];
 // Kysymykset
 let kysymykset = [
   new Trivia("Mikä näistä eläimistä tykkää syödä salaattia?", 
-  ["Lehmä", "Kani", "Pöllö", "Rapu"], 1),
+  ["Lehmä", "Jänis", "Pöllö", "Rapu"], 1),
 
   new Trivia("Mikä näistä eläimistä on hitain?",
-  ["Kani", "Hevonen", "Tiikeri", "Etana"], 3),
+  ["Jänis", "Hevonen", "Tiikeri", "Etana"], 3),
 
   new Trivia("Millä näistä eläimistä on koukkuja kielessä?",
   ["Kissa", "Karhu", "Marsu", "Käärme"], 0),
@@ -58,32 +59,32 @@ $(document).ready(function() {
   // Syötä tiedot uudelle kysymykselle
   function uusiKysymys(kysymys) {
     nykyinenKysymys = kysymys;
-    $("#question").html(kysymys.question);
-    //console.log(kysymys.answers.length);
-    for(let i = 0; i < kysymys.answers.length; i++) {
-      //console.log(kysymys.answers[i]);
-      $("#answer" + i).html(kysymys.answers[i]);
+    $("#nextBtn").prop("disabled", true);
+    $("#question").html(kysymys.teksti);
+    for(let i = 0; i < kysymys.vastaukset.length; i++) {
+      $("#answer" + i).html(kysymys.vastaukset[i]);
     }
 
     $("#numero").html(kysymykset.indexOf(kysymys)+1);
   }
-  
 
   $(".answerbox").click(function() {
     // Etsi valitun vastauksen numero
     let id = Number($("p", this).attr("id").slice(-1));
     if(!valittu) {
-      if(id === nykyinenKysymys.correct) {
+      if(id === nykyinenKysymys.oikea) {
         //console.log("Correct");
         $(this).addClass("correct"); 
       } else {
         $(this).addClass("incorrect");
-        $("#answer"+nykyinenKysymys.correct).parent().addClass("correct");
+        $("#answer"+nykyinenKysymys.oikea).parent().addClass("correct");
       }
       syötetytVastaukset.push(id);
     } else { 
       return;
     }
+
+    if(!loppu) $("#nextBtn").prop("disabled", false);
     valittu = true;
   });
 
@@ -98,10 +99,27 @@ $(document).ready(function() {
       uusiKysymys(kysymykset[3]);
     } else if(nykyinenKysymys == kysymykset[3]) {
       uusiKysymys(kysymykset[4]);
+      $(this).html("Tulokset");
     } else if(nykyinenKysymys == kysymykset[4]) {
-      
+      näytäTulokset();
     }
     $(".answerbox").removeClass("correct");
     $(".answerbox").removeClass("incorrect");
   });
+
+  function näytäTulokset() {
+    loppu = true;
+    $("#tulokset").removeClass("piilossa");
+    $("#nextBtn").prop("disabled", true);
+
+    for(let i = 0; i < kysymykset.length; i++) {
+      let oikeaVastaus = kysymykset[i].vastaukset[kysymykset[i].oikea];
+      let vastaus = kysymykset[i].vastaukset[syötetytVastaukset[i]];
+      $("#tulosLista").append(kysymykset[i].teksti + "<br>");
+      $("#tulosLista").append("Oikea vastaus: " + oikeaVastaus + "<br>" +
+                              "Vastauksesi: " + vastaus +
+                              "<br><br>");
+    }
+  }
+
 });
