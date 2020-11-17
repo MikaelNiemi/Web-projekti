@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liikennesääntövisa</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/yhteinen.css">
     <link rel="stylesheet" href="css/zinchenko.css">
     <meta content="Alina Zinchenko" name="author">
@@ -62,26 +64,27 @@
                 <h5>1. Mitä tarkoittaa punainen valo liikennevaloissa?</h5>
                 <form>
                     <div class="form-check">
-                        <input type="radio" name="question1" id="juokse1" class="vastaus1" value="0">
+                        <input type="radio" name="kysymys1" id="juokse1" class="kysymys" value="0">
                         <label for="juokse1" class="form-check-label">Saa juosta tien yli.</label>
                     </div>
 
                     <div class="form-check">
-                        <input type="radio" name="question1" id="pysähdy1" class="vastaus1" value="1">
+                        <input type="radio" name="kysymys1" id="pysähdy1" class="kysymys" value="1">
                         <label for="pysähdy1" class="form-check-label">Pitää pysähtyä ja odottaa vihreän valon
                             syttymistä.</label>
                     </div>
 
                     <div class="form-check">
-                        <input type="radio" name="question1" id="mene1" class="vastaus1" value="0">
+                        <input type="radio" name="kysymys1" id="mene1" class="kysymys" value="0">
                         <label for="mene1" class="form-check-label">Saa ylittää tien, jos ei näy autoja.</label>
                     </div>
-                    <button type="button" id="tarkista1" class="btn btn-outline-info mb-3 mt-2">Tarkista</button>
+                    <button type="button" id="tarkista1" class="btn btn-outline-info mb-3 mt-2"><i
+                            class="fa fa-check-square-o" aria-hidden="true"></i> Tarkista</i></button>
                 </form>
             </div>
             <div class="col-12 col-md-6">
                 <h5>Vastaus: Kysymys 1</h5>
-                <p id="vastaus1" class="piilossa"><b>Piilotettu vastausboksi ?</b></p>
+                <p id="vastaus1" class="piilossa"></p>
             </div>
         </section>
 
@@ -90,28 +93,29 @@
                 <h5>2. Mitä teet, kun aiot ylittää suojatien ja näet auton lähestyvän?</h5>
                 <form>
                     <div class="form-check">
-                        <input type="radio" name="question2" id="juokse2" >
+                        <input type="radio" name="question2" id="juokse2" class="kysymys" value="0">
                         <label for="juokse2" class="form-check-label">Juokset äkkiä tien yli, vielä ehdit!</label>
                     </div>
 
                     <div class="form-check">
-                        <input type="radio" name="question2" id="katso2">
+                        <input type="radio" name="question2" id="katso2" class="kysymys" value="0">
                         <label for="katso2" class="form-check-label">Katsot molempiin suuntiin ja lähdet
                             ylittämään.</label>
                     </div>
 
                     <div class="form-check">
-                        <input type="radio" name="question2" id="odota2">
+                        <input type="radio" name="question2" id="odota2" class="kysymys" value="1">
                         <label for="odota2" class="form-check-label">
                             Odotat kunnes auto pysähtyy, katsot molempiin suuntiin ja varmistat, että tien ylitys on
                             turvallinen.</label>
                     </div>
-                    <button type="button" id="tarkista2" class="btn btn-outline-info mb-3 mt-2">Tarkista</button>
+                    <button type="button" id="tarkista2" class="btn btn-outline-info mb-3 mt-2"><i
+                            class="fa fa-check-square-o" aria-hidden="true"></i> Tarkista</button>
                 </form>
             </div>
             <div class="col-12 col-md-6">
                 <h5>Vastaus: Kysymys 2</h5>
-                <p id="vastaus2" class="piilossa"><b>Piilotettu vastausboksi ?</b></p>
+                <p id="vastaus2" class="piilossa"></p>
             </div>
         </section>
 
@@ -120,25 +124,26 @@
                 <h5>3. Missä kypärän pitää olla pyöräillessä?</h5>
                 <form>
                     <div class="form-check">
-                        <input type="radio" name="question3" id="kotona3" >
+                        <input type="radio" name="question3" id="kotona3" class="kysymys" value="0">
                         <label for="kotona3" class="form-check-label">Kotona.</label>
                     </div>
 
                     <div class="form-check">
-                        <input type="radio" name="question3" id="roikkumassa3">
+                        <input type="radio" name="question3" id="roikkumassa3" class="kysymys" value="0">
                         <label for="roikkumassa3" class="form-check-label">Ohjaustangossa roikkumassa.</label>
                     </div>
 
                     <div class="form-check">
-                        <input type="radio" name="question3" id="päässä3">
+                        <input type="radio" name="question3" id="päässä3" class="kysymys" value="1">
                         <label for="päässä3" class="form-check-label">Päässä huolellisesti kiinnitettynä.</label>
                     </div>
-                    <button type="button" id="tarkista3" class="btn btn-outline-info mb-3 mt-2">Tarkista</button>
+                    <button type="button" id="tarkista3" class="btn btn-outline-info mb-3 mt-2"><i
+                            class="fa fa-check-square-o" aria-hidden="true"></i> Tarkista</button>
                 </form>
             </div>
             <div class="col-12 col-md-6">
                 <h5>Vastaus: Kysymys 3</h5>
-                <p id="vastaus3" class="piilossa"><b>Piilotettu vastausboksi ?</b></p>
+                <p id="vastaus3" class="piilossa"></p>
             </div>
         </section>
 
@@ -147,25 +152,28 @@
                 <h5>4. Mitä on hyvä tehdä, jos aikoo ohittaa jalankulkijan pyörällä?</h5>
                 <form>
                     <div class="form-check">
-                        <input type="radio" name="question4" id="soittokello4" >
-                        <label for="soittokello4" class="form-check-label">Varoitat jalankulkijaa soittamalla soittokelloa ja varmistat, että ohittaminen on turvallista.</label>
+                        <input type="radio" name="question4" id="soittokello4" class="kysymys" value="1">
+                        <label for="soittokello4" class="form-check-label">Varoitat jalankulkijaa soittamalla
+                            soittokelloa ja varmistat, että ohittaminen on turvallista.</label>
                     </div>
 
                     <div class="form-check">
-                        <input type="radio" name="question4" id="kissankello4">
-                        <label for="kissankello4" class="form-check-label">Varoitat jalankulkijaa soittamalla kissankelloa.</label>
+                        <input type="radio" name="question4" id="kissankello4" class="kysymys" value="0">
+                        <label for="kissankello4" class="form-check-label">Varoitat jalankulkijaa soittamalla
+                            kissankelloa.</label>
                     </div>
 
                     <div class="form-check">
-                        <input type="radio" name="question4" id="ohita4">
+                        <input type="radio" name="question4" id="ohita4" class="kysymys" value="0">
                         <label for="ohita4" class="form-check-label">Et tee mitään, lähdet vain ohittamaan.</label>
                     </div>
-                    <button type="button" id="tarkista4" class="btn btn-outline-info mb-3 mt-2">Tarkista</button>
+                    <button type="button" id="tarkista4" class="btn btn-outline-info mb-3 mt-2"><i
+                            class="fa fa-check-square-o" aria-hidden="true"></i> Tarkista</button>
                 </form>
             </div>
             <div class="col-12 col-md-6">
                 <h5>Vastaus: Kysymys 4</h5>
-                <p id="vastaus4" class="piilossa"><b>Piilotettu vastausboksi ?</b></p>
+                <p id="vastaus4" class="piilossa"></p>
             </div>
         </section>
 
@@ -174,25 +182,26 @@
                 <h5>5. Pitääkö pyörässä olla valot?</h5>
                 <form>
                     <div class="form-check">
-                        <input type="radio" name="question5" id="ei5" >
+                        <input type="radio" name="question5" id="ei5" class="kysymys" value="0">
                         <label for="ei5" class="form-check-label">Ei.</label>
                     </div>
 
                     <div class="form-check">
-                        <input type="radio" name="question5" id="etuvalo5">
+                        <input type="radio" name="question5" id="etuvalo5" class="kysymys" value="0">
                         <label for="etuvalo5" class="form-check-label">Joo, etuvalo.</label>
                     </div>
 
                     <div class="form-check">
-                        <input type="radio" name="question5" id="joo5">
+                        <input type="radio" name="question5" id="joo5" class="kysymys" value="1">
                         <label for="joo5" class="form-check-label">Joo, etu- ja takavalot.</label>
                     </div>
-                    <button type="button" class="btn btn-outline-info mb-3 mt-2">Tarkista</button>
+                    <button type="button" id="tarkista5" class="btn btn-outline-info mb-3 mt-2"><i class="fa fa-check-square-o"
+                            aria-hidden="true"></i> Tarkista</button>
                 </form>
             </div>
             <div class="col-12 col-md-6">
                 <h5>Vastaus: Kysymys 5</h5>
-                <p id="vastaus5" class="piilossa"><b>Piilotettu vastausboksi ?</b></p>
+                <p id="vastaus5" class="piilossa"></p>
             </div>
         </section>
 
@@ -210,7 +219,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-        <script src="js/zinchenko.js"></script>
+    <script src="js/liikennesaanto.js"></script>
 </body>
 
 </html>
