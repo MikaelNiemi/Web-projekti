@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maantieto-visa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/maantieto.css">
+    <link rel="stylesheet" href="css/yhteinen.css">
+</head>
+
+<body>
+    <main class="container">
+        <header class="row">
+            <div class="col-12 mx-auto p-0 mt-2 border-dark">
+                <h1 class="text-center">Web-projekti Study Group 7</h1>
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark mx-0">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Etusivu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sivu #2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sivu #3</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tietovisat
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Visa #1</a>
+                                    <a class="dropdown-item" href="#">Visa #2</a>
+                                    <a class="dropdown-item" href="#">Visa #3</a>
+                                </div>
+                            </li>
+                </nav>
+            </div>
+        </header>
+
+        <section class="row mx-auto mt-2">
+            <div id="intro" class="m-md-3">
+                <h3 class="col-12 mt-2"><i class="fa fa-globe" aria-hidden="true"></i> Maantieto-visa <i class="fa fa-globe" aria-hidden="true"></i></h3>
+                <p class="col-11 mb-2">Tämä visa on suunnattu ala-asteikäisille lapsille. Visa sisältää
+                    yhteensä 5 kysymystä. Jokaisessa kysymyksessä on 5 vastausvaihtoehtoa,
+                    joista vain 1 on oikein. </p>
+                <p class="col-11 mb-2">Saat tietää heti vastattuasi, onko vastauksesi oikein vai väärin. Jos 
+                    vastauksesi on väärin, kerrotaan sinulle oikea vastaus.</p>
+                <p class="col-11 mb-2">
+                   <b>Vastattuasi kaikkiin kohtiin</b> voit halutessasi katsoa arvosanasi 
+                    painamalla sivun lopussa olevaa <b>ARVOSANA</b>-painiketta.
+                </p>
+            </div>
+
+            <form id="visa" class="mt-4 ml-md-3 pl-md-4 container-fluid">
+                <h4 class="col-12">1. Mikä seuraavista EI ole maanosa?</h4>
+                    <section class="row">
+                    <div class="col-12 col-md-4 mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="kysymys1" id="vastaus1a"
+                                value="väärin">
+                            <label class="form-check-label" for="vastaus1a">
+                                Etelämanner
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="kysymys1" id="vastaus1b"
+                                value="väärin">
+                            <label class="form-check-label" for="vastaus1b">
+                                Aasia
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="kysymys1" id="vastaus1c"
+                                value="oikein">
+                            <label class="form-check-label" for="vastaus1c">
+                                Pohjoisnapa 
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="kysymys1" id="vastaus1d"
+                                value="väärin">
+                            <label class="form-check-label" for="vastaus1d">
+                                Afrikka
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="kysymys1" id="vastaus1e"
+                                value="väärin">
+                            <label class="form-check-label" for="vastaus1e">
+                                Eurooppa
+                            </label>
+                        </div>
+                        
+                </div>
+                <div class="col-12 col-md-5">
+                    <p id="palaute1" class="invisible mt-4"></p>
+                </div>
+            </section>
+                
+                    <h4 class="col-12">2. Mikä seuraavista muun muassa vaikuttaa vuodenaikojen vaihteluun?</h4>
+                    <section class="row">
+                        <div class="col-12 col-md-4 mb-2">
+                        <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys2" id="vastaus2a"
+                            value="oikein">
+                        <label class="form-check-label" for="vastaus2a">
+                            Maa kiertää aurinkoa.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys2" id="vastaus2b"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus2b">
+                            Aurinko kiertää maata.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys2" id="vastaus2c"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus2c">
+                            Kuu kiertää maata.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys2" id="vastaus2d"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus2d">
+                            Maa kiertää kuuta.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys2" id="vastaus2e"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus2e">
+                            Kuu kiertää aurinkoa.
+                        </label>
+                    </div> 
+                </div>
+                <div class="col-12 col-md-5">
+                    <p id="palaute2" class="invisible mt-4"></p>
+                </div>
+            </section>
+
+                
+            <h4 class="col-12">3. Miksi kutsutaan väli-ilmansuuntaa, joka on pohjoisen ja lännen välissä?</h4>
+                    <section class="row">
+                        <div class="col-12 col-md-4 mb-2">
+                           
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys3" id="vastaus3a"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus3a">
+                            Lounas
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys3" id="vastaus3b"
+                            value="oikein">
+                        <label class="form-check-label" for="vastaus3b">
+                            Luode
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys3" id="vastaus3c"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus3c">
+                            Itä
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys3" id="vastaus3d"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus3d">
+                            Kaakko
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys3" id="vastaus3e"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus3e">
+                            Koillinen
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <p id="palaute3" class="invisible mt-4"></p>
+                </div>
+            </section>
+
+                
+            <h4 class="col-12">4. Mikä seuraavista EI ole valtameri?</h4>
+                    <section class="row">
+                        <div class="col-12 col-md-4 mb-2">
+                            
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys4" id="vastaus4a"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus4a">
+                            Tyynimeri
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys4" id="vastaus4b"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus4b">
+                            Pohjoinen jäämeri
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys4" id="vastaus4c"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus4c">
+                            Atlantti
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys4" id="vastaus4d"
+                            value="oikein">
+                        <label class="form-check-label" for="vastaus4d">
+                            Välimeri
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys4" id="vastaus4e"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus4e">
+                            Eteläinen jäämeri
+                        </label>
+                    </div> 
+                </div>
+                <div class="col-12 col-md-5">
+                        <p id="palaute4" class="invisible mt-4"></p>
+                    </div>             
+            </section>
+
+                
+                    <h4 class="col-12">5. Miksi kutsutaan pohjoisella pallonpuoliskolla sijaitsevaa kääntöpiiriä?</h4>
+                    <section class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="form-check">
+                    
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys5" id="vastaus5a"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus5a">
+                            Karhun kääntöpiiri
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys5" id="vastaus5b"
+                            value="oikein">
+                        <label class="form-check-label" for="vastaus5b">
+                            Kravun kääntöpiiri
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys5" id="vastaus5c"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus5c">
+                            Kauriin kääntöpiiri
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys5" id="vastaus5d"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus5d">
+                            Kurjen kääntöpiiri
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="" type="radio" name="kysymys5" id="vastaus5e"
+                            value="väärin">
+                        <label class="form-check-label" for="vastaus5e">
+                            Pohjoinen kääntöpiiri
+                        </label>
+                    </div>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <p id="palaute5" class="invisible mt-4"></p>
+                    </div>
+            </section>
+
+            <section class="row">
+                <div class="col-12 col-md-5 mt-md-5 mb-4">
+                        <button type="button" id="tarkista" class="btn btn-purple">ARVOSANA</button>
+                </div>
+                
+
+                <div class="col-12 col-md-5">
+                    <p id="tulokset" class="big_font text-center invisible"></p>
+                </div>
+            </section>
+        </form>
+        </section>
+        <footer class="row mx-auto">
+
+        </footer>
+    </main>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="js/maantieto.js"></script>
+</body>
+
+</html>
