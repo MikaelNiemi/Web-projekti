@@ -35,3 +35,7 @@ button{
     width: 95px;
     height: 50px;
 }
+
+#prize img{
+    border: none;
+}
