@@ -1,5 +1,5 @@
 
-//Kysymykset ja vastaukset arrayssa
+//Kysymykset ja vastaukset taulukossa.
 const questions = [
     {
         question: "Millä suomen linnuista on maailman pisin muuttomatka?",
@@ -14,8 +14,8 @@ const questions = [
     },
     {
         question: "Mikä on suomen yleisin kalalaji?",
-        answer: [{ text: "Särki", correct: false }, { text: "Lahna", correct: false },
-        { text: "Ahven", correct: true }, { text: "Hauki", correct: false }]
+        answer: [{ text: "Ahven", correct: true }, { text: "Lahna", correct: false },
+        { text: "Särki", correct: false }, { text: "Hauki", correct: false }]
     },
     {
         question: "Mikä suomen pienin lintulaji?",
@@ -29,8 +29,8 @@ const questions = [
     }
 ]
 
-//Lisätiedot oikeasta vastauksesta arrayssa
-const tietoa = [
+//Lisätiedot oikeasta vastauksesta taulukossa.
+const info = [
     'Pisimmän muuttomatkan maailmassa tekee lapintiira.<br>Lapintiira voi lentää jopa 81 000 kilometrin muuttomatkan.<br>Arvioiden mukaan lapintiira lentää koko elämänsä aikana 2.4 miljoonaa kilometria.',
 
     'Suomen suurin nisäkäs on hirvi. <br>Aikuinen hirvi voi kasvaa jopa 800kg painoiseksi ja kolme metriä pitkäksi. ',
@@ -42,8 +42,8 @@ const tietoa = [
     'Suomen yleisin lintulaji on pajulintu. <br>Pajulintu on levinnyt koko maan alueelle ja suomessa pesii nykyisin 7 - 11 miljoonaa paria. '
 
 ]
-
-const kuvat = [
+//Tulostettavat kuvat taulukossa.
+const images = [
     '<img src="img/lapintiira-web.jpg" class="img-fluid" alt=""/>',
     '<img src="img/hirvi-web.jpg" class="img-fluid" alt=""/>',
     '<img src="img/ahven-web.jpg" class="img-fluid" alt=""/>',
@@ -51,72 +51,83 @@ const kuvat = [
     '<img src="img/pajulintu-web.jpg" class="img-fluid" alt=""/>'
 ]
 
-
-const palkinnot = [
+//Palkintojen kuvat taulukossa.
+const prizes = [
     '<img src="img/trophy-web.png" class="img-fluid" alt=""/>',
     '<img src="img/thumbsup-web.png" class="img-fluid" alt=""/>',
     '<img src="img/thumbsdown-web.png" class="img-fluid" alt=""/>',
 ]
 
 
-let vastattu = 0
-let oikein = 0
-
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-//Funktio kysymyksen ja vastausten asettamiseen
-function setQuestion() {
-    let random = getRndInteger(0, questions.length - 1)
-    $("#start-btn").addClass("hide")
-    $("#answers").removeClass("hide")
-    $("#question").removeClass("hide")
-    $("#question").html(questions[random].question)
-    $("#vastaus").html(tietoa[random])
-    $("#kuva").html(kuvat[random])
-
-    for (let i = 0; i < 4; i++) {
-        //Poistetaan vanhat luokat vastauksista ensin
-        $(`#answer-${i}`).removeClass("correct")
-        $(`#answer-${i}`).removeClass("false")
-        //Lisätään uudet luokat vastauksille sen mukaan onko vastaus oikein vain väärin
-        $(`#answer-${i}`).html(questions[random].answer[i].text)
-        if (questions[random].answer[i].correct === true) {
-            $(`#answer-${i}`).addClass("correct")
-        } else {
-            $(`#answer-${i}`).addClass("false")
-        }
-    }
-    questions.splice(random, 1)
-    tietoa.splice(random, 1)
-    kuvat.splice(random, 1)
-};
-
-function resetProps() {
-    $(".correct").prop("disabled", false)
-    $(".false").prop("disabled", false)
-    $(".correct").css("background-color", "")
-    $(".false").css("background-color", "")
-    $("#vastaus").addClass("hide")
-    $("#kuva").addClass("hide")
-    $("#next").addClass("hide")
-};
-
 
 $(document).ready(function () {
-    //Visan aloitus
+
+    //Kopioidaan taulukot jotta niitä voi muokata ja tarvittaessa palauttaa alkuperäiset tiedot.
+    let questions2 = [...questions];
+    let info2 = [...info];
+    let images2 = [...images];
+
+    //Luodaan muuttujat käydyille kysymyksille ja oikein vastatuille kysymyksille.
+    let vastattu = 0
+    let oikein = 0
+
+    //Visan aloitus.
     $("#start-btn").click(function () {
         setQuestion()
-    })
+    });
 
-    //Funktio vastauksille
+    //Funktio satunnaisluvun generoimiseksi
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    //Funktio kysymysten järjestyksen satunnaistamiseksi
+    function setQuestion() {
+        let random = getRndInteger(0, questions2.length - 1)
+        $("#start-btn").addClass("hide")
+        $("#answers").removeClass("hide")
+        $("#question").removeClass("hide")
+        $("#info").addClass("hide")
+        $("#question").html(questions2[random].question)
+        $("#answer").html(info2[random])
+        $("#image").html(images2[random])
+
+        for (let i = 0; i < 4; i++) {
+            //Poistetaan vanhat luokat vastauksista ensin
+            $(`#answer-${i}`).removeClass("correct")
+            $(`#answer-${i}`).removeClass("false")
+            //Lisätään uudet luokat vastauksille sen mukaan onko vastaus oikein vain väärin
+            $(`#answer-${i}`).html(questions2[random].answer[i].text)
+            if (questions2[random].answer[i].correct === true) {
+                $(`#answer-${i}`).addClass("correct")
+            } else {
+                $(`#answer-${i}`).addClass("false")
+            }
+        }
+        //Poistetaan esitetty kysymys ja vastaus taulukosta. 
+        questions2.splice(random, 1)
+        info2.splice(random, 1)
+        images2.splice(random, 1)
+    };
+
+    //Funktio tiettyjen ominaisuuksien nollaamiseksi/piilottamiseksi. Käytetään esim. Kun käyttäjä painaa "Seuraava nappia"
+    function resetProps() {
+        $(".correct").prop("disabled", false)
+        $(".false").prop("disabled", false)
+        $(".correct").css("background-color", "")
+        $(".false").css("background-color", "")
+        $("#answer").addClass("hide")
+        $("#image").addClass("hide")
+        $("#next").addClass("hide")
+    };
+
+    //Funktio vastauksille. Riippuen siitä onko vastaus väärin vai oikein, värjätään tulos sen mukaisesti.
     $("#answers button").click(function () {
         $(".correct").prop("disabled", true)
         $(".false").prop("disabled", true)
-        $("#vastaus").removeClass("hide")
+        $("#answer").removeClass("hide")
         $("#next").removeClass("hide")
-        $("#kuva").removeClass("hide")
+        $("#image").removeClass("hide")
 
         if ($(this).hasClass("correct")) {
             $("#correct").removeClass("hide")
@@ -126,26 +137,29 @@ $(document).ready(function () {
             $("#wrong").removeClass("hide")
             $(this).css("background-color", "#bd3b36")
         }
-    })
+    });
 
-    $("#next").click(function () {
+    /* Funktio "Seuraava" napille. Jos vastattu muuttuja on tietyssä pisteessä, siirrytään esittämään visan tulokset ja palkinto. 
+    Muussa tapauksessa vastattu muuttujaa korotetaan ja siirrytään seuraavaan kysymykseen. */
+    $("#next-btn").click(function () {
         if (vastattu === 4) {
             $("#answers").addClass("hide")
             $("#question").addClass("hide")
-            $("#vastaus").addClass("hide")
+            $("#answer").addClass("hide")
             $("#next").addClass("hide")
             $("#reset").removeClass("hide")
-            $("#kuva").addClass("hide")
+            $("#image").addClass("hide")
             $("#prize").removeClass("hide")
+            $("#results").removeClass("hide")
             $("#results").append(`<h1>Sait ${oikein}/5 oikein!</h1>`)
-            if(oikein === 5){
-                $("#prize").append(palkinnot[0])
+            if (oikein === 5) {
+                $("#prize").append(prizes[0])
                 $("#results").append("Hienoa työtä! Olet oikea luontomestari!")
-            }else if(oikein < 5 && oikein > 2){
-                $("#prize").append(palkinnot[1])
+            } else if (oikein < 5 && oikein > 2) {
+                $("#prize").append(prizes[1])
                 $("#results").append("Melkein kaikki oikein! Yritä vielä uudestaan jos saisit ensi kerralla täydet pisteet!")
-            }else{
-                $("#prize").append(palkinnot[2])
+            } else {
+                $("#prize").append(prizes[2])
                 $("#results").append("Vastauksissa on vielä parantamisen varaa. Yritä uudelleen jos seuraava kerta menisi jo paremmin!")
             }
         } else {
@@ -156,8 +170,24 @@ $(document).ready(function () {
         }
 
 
-    })
+    });
 
+    //Funktio visan nollaamiselle kun painetaan "Uudelleen" nappia.
+    $("#reset").click(function () {
+        $("#results").addClass("hide")
+        $("#prize").addClass("hide")
+        $("#prize").html("")
+        $("#results").html("")
+        $("#reset").addClass("hide")
+        $("#start-btn").removeClass("hide")
+        $("#info").removeClass("hide")
+        resetProps()
+        vastattu = 0
+        oikein = 0
+        questions2 = [...questions];
+        info2 = [...info];
+        images2 = [...images];
+    });
 
 
 })

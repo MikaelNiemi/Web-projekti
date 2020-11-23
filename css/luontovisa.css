@@ -19,7 +19,7 @@ border-radius: 0px;
     opacity: 1
 }
 
-#vastaus{
+#answer{
     background: rgb(88, 88, 88);
     border-radius: 5px ;
     color: snow;
@@ -38,4 +38,8 @@ button{
 
 #prize img{
     border: none;
+}
+
+p{
+    margin-bottom: 6px;
 }
