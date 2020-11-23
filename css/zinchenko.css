@@ -20,3 +20,12 @@
 .piilossa {
     display: none;
 }
+
+.palkinto {
+    color: gold;
+}
+
+.yhteenveto {
+    margin: auto;
+    width: 60%;
+}
