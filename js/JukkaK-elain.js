@@ -110,6 +110,9 @@ $(document).ready(function() {
   function näytäTulokset() {
     loppu = true;
     $("#tulokset").removeClass("piilossa");
+    $("#palkinto").removeClass("piilossa");
+    $(".answerbox").addClass("piilossa");
+    $("#questionbox").addClass("piilossa");
     $("#nextBtn").prop("disabled", true);
 
     for(let i = 0; i < kysymykset.length; i++) {
@@ -119,6 +122,29 @@ $(document).ready(function() {
       $("#tulosLista").append("Oikea vastaus: " + oikeaVastaus + "<br>" +
                               "Vastauksesi: " + vastaus +
                               "<br><br>");
+    }
+    annaPalkinto();
+  }
+
+  function annaPalkinto() {
+    let oikein = 0;
+    for(let i = 0; i < kysymykset.length; i++) {
+      let oikeaVastaus = kysymykset[i].vastaukset[kysymykset[i].oikea];
+      let vastaus = kysymykset[i].vastaukset[syötetytVastaukset[i]];
+      if(oikeaVastaus === vastaus) {
+        oikein++;
+      }
+    }
+    
+    if(oikein >= 2 && oikein < 4) {
+      $("#palkinto").html("<img src='img/tahti1.png' alt='' />");
+      $("#palkinto").append("<p>" + oikein + " oikein. Parantamisen varaa löytyy.</p>");
+    } else if(oikein == 4) {
+      $("#palkinto").html("<img src='img/tahti2.png' alt='' />");
+      $("#palkinto").append("<p>" + oikein + " oikein. Melkein kaikki oikein.</p>");
+    } else if(oikein == 5) {
+      $("#palkinto").html("<img src='img/tahti3.png' alt='' />");
+      $("#palkinto").append("<p>Kaikki oikein. Hyvin tehty!</p>");
     }
   }
 

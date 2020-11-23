@@ -13,6 +13,17 @@
   background-color: white;
 }
 
+#palkinto {
+  border: 4px black solid;
+
+  width: fit-content;
+  height: fit-content;
+  
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 0px;
+}
+
 .answerbox {
   border: 2px gray solid;
   margin-top: 1em;
