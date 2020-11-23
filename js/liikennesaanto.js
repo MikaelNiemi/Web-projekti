@@ -18,8 +18,9 @@ $(document).ready(function () {
     // lasketaan oikeita vastauksia
     let hyvä = 0;
 
-    // Kysymys 1 tarkistus: värit, vastaus selitys
-    $("#tarkista1").click(function () {
+    $("#yhteenveto").click(function () {
+
+        // Kysymys 1 tarkistus: värit, vastaus selitys
         if ($("#pysähdy1").is(":checked")) {
             $("#pysähdy1").next().addClass("oikein");
             $("#vastaus1").removeClass("piilossa").html("<i class='fa fa-star fa-2x palkinto' aria-hidden='true'></i>Hyvä!");
@@ -35,12 +36,13 @@ $(document).ready(function () {
             $("#pysähdy1").next().addClass("oikein");
             $("#vastaus1").removeClass("piilossa").html("Väärin! Odotat vihreän valon syttymistä.");
         } else {
+
             return alert("Kysymys 1: Vastaus puuttuu");
         }
-    });
 
-    //Kysymys 2 tarkistus
-    $("#tarkista2").click(function () {
+
+        //Kysymys 2 tarkistus
+
         if ($("#odota2").is(":checked")) {
             $("#odota2").next().addClass("oikein");
             $("#vastaus2").removeClass("piilossa").html("<i class='fa fa-star fa-2x palkinto' aria-hidden='true'></i>Hyvä!");
@@ -58,12 +60,12 @@ $(document).ready(function () {
             $("#vastaus2").removeClass("piilossa").html("Väärin! Odotat kunnes auto pysähtyy, katsot molempiin suuntiin ja varmistat, että tien ylitys" +
                 "on turvallinen.");
         } else {
+
             return alert("Kysymys 2: Vastaus puuttuu");
         }
-    });
 
-    //Kysymys 3 tarkistus
-    $("#tarkista3").click(function () {
+        //Kysymys 3 tarkistus
+
         if ($("#päässä3").is(":checked")) {
             $("#päässä3").next().addClass("oikein");
             $("#vastaus3").removeClass("piilossa").html("<i class='fa fa-star fa-2x palkinto' aria-hidden='true'></i>Hyvä!");
@@ -79,12 +81,12 @@ $(document).ready(function () {
             $("#päässä3").next().addClass("oikein");
             $("#vastaus3").removeClass("piilossa").html("Väärin! Kypärän pitää olla päässä huolellisesti kiinnitettynä.");
         } else {
+
             return alert("Kysymys 3: Vastaus puuttuu");
         }
-    });
 
-    //Kysymys 4 tarkistus
-    $("#tarkista4").click(function () {
+        //Kysymys 4 tarkistus
+
         if ($("#soittokello4").is(":checked")) {
             $("#soittokello4").next().addClass("oikein");
             $("#vastaus4").removeClass("piilossa").html("<i class='fa fa-star fa-2x palkinto' aria-hidden='true'></i>Hyvä!");
@@ -93,21 +95,21 @@ $(document).ready(function () {
         } else if ($("#kissankello4").is(":checked")) {
             $("#kissankello4").next().addClass("väärin");
             $("#soittokello4").next().addClass("oikein");
-            $("#vastaus4").removeClass("piilossa").html("Väärin! Varoitat jalankulkijaa soittamalla" + 
-            " soittokelloa ja varmistat, että ohittaminen on turvallista.");
+            $("#vastaus4").removeClass("piilossa").html("Väärin! Varoitat jalankulkijaa soittamalla" +
+                " soittokelloa ja varmistat, että ohittaminen on turvallista.");
 
-        } else if($("#ohita4").is(":checked")) {
+        } else if ($("#ohita4").is(":checked")) {
             $("#ohita4").next().addClass("väärin");
             $("#soittokello4").next().addClass("oikein");
             $("#vastaus4").removeClass("piilossa").html("Väärin! Varoitat jalankulkijaa soittamalla" +
-            " soittokelloa ja varmistat, että ohittaminen on turvallista.");
+                " soittokelloa ja varmistat, että ohittaminen on turvallista.");
         } else {
+
             return alert("Kysymys 4: Vastaus puuttuu");
         }
-    });
 
-    //Kysymys 5 tarkistus
-    $("#tarkista5").click(function () {
+        //Kysymys 5 tarkistus
+
         if ($("#joo5").is(":checked")) {
             $("#joo5").next().addClass("oikein");
             $("#vastaus5").removeClass("piilossa").html("<i class='fa fa-star fa-2x palkinto' aria-hidden='true'></i>Hyvä!");
@@ -123,11 +125,10 @@ $(document).ready(function () {
             $("#joo5").next().addClass("oikein");
             $("#vastaus5").removeClass("piilossa").html("Väärin! Uuden lain mukaan pitää olla etu- ja takavalot.");
         } else {
+
             return alert("Kysymys 5: Vastaus puuttuu");
         }
-    });
 
-    $("#yhteenveto").click(function(){
         if (hyvä === 5) {
             alert("Onnea, sait" + hyvä + "/5! :)");
         } else {
@@ -136,7 +137,8 @@ $(document).ready(function () {
 
     });
 
+    $("#yritä").click(function(){
+        location.reload();
+    });
+
 });
-
-
-// Lähde: https://stackoverflow.com/questions/2272507/find-out-whether-radio-button-is-checked-with-jquery
