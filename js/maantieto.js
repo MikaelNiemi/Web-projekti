@@ -89,7 +89,7 @@
                      
                     } else {
                       $(this).parent().addClass("punainen");
-                      $("#palaute5").html("Oho, pieleen meni. Kääntöpiiri on leveyspiiri 23,4 astetta sekä pohjoisella että eteläisellä pallonpuoliskolla.<br><br><b>Pohjoisessa sijaitsee Kravun kääntöpiiri</b>, etelässä taas Kauriin kääntöpiiri.");
+                      $("#palaute5").html("Oho, pieleen meni.<br><br>Kääntöpiiri on leveyspiiri 23,4 astetta sekä pohjoisella että eteläisellä pallonpuoliskolla.<b>Pohjoisessa sijaitsee Kravun kääntöpiiri</b>, etelässä taas Kauriin kääntöpiiri.");
                       $("#palaute5").removeClass("invisible"); //(<a href='https://fi.wikipedia.org/wiki/K%C3%A4%C3%A4nt%C3%B6piiri' target='_blank'>LÄHDE</a>)
                    }  
                 
@@ -103,10 +103,14 @@
 
 
    $("#tarkista").click(function(){
+      // Tulostusten tyhjennys
+      $("#modal-title").html("");
+      $("#modal-body").html("");
+
       // Lasketaan oikeat ja väärät vastaukset
-      let oikeat = new Array();
-      let väärät = new Array();
-      let vastaamattomat = new Array();
+      let oikeat = [];
+      let väärät = [];
+      let vastaamattomat = []; 
          
       // Lasketaan oikeat/väärät vastaukset, sekä mahd. tyhjät kohdat
          let vastaus1 = $("input[name=kysymys1]:checked").val();
@@ -157,22 +161,40 @@
           
 
 
+               // if (vastaamattomat.length > 0) {
+               //    confirm("Sinun tulee vastata ensin kaikkiin kohtiin!");
+               //    return;
+               // } else {
+               //    $("#tulokset").removeClass("invisible");
+               //    for (let j = 0; j < oikeat.length; j++) {
+               //       document.getElementById("tulokset").innerHTML+=
+               //       '<i class="fa fa-star" aria-hidden="true"></i>'
+               //    }
+               //    for (let i = 0; i < väärät.length; i++) {
+               //       document.getElementById("tulokset").innerHTML+=
+               //       '<i class="fa fa-star-o" aria-hidden="true"></i>'
+               //    }   
+               // }
+
                if (vastaamattomat.length > 0) {
-                  confirm("Sinun tulee vastata ensin kaikkiin kohtiin!");
+                  $("#modal-title").html("Virhe:");
+                  $("#modal-body").html("Sinun tulee ensin vastata kaikkiin kohtiin!");
+                  $("#ilmoitus").modal("show");
                   return;
                } else {
-                  $("#tulokset").removeClass("invisible");
-                  for (let j = 0; j < oikeat.length; j++) {
-                     document.getElementById("tulokset").innerHTML+=
-                     '<i class="fa fa-star" aria-hidden="true"></i>'
                   }
+                  for (let j = 0; j < oikeat.length; j++) {
+                     $("#modal-body").append('<i class="fa fa-star" aria-hidden="true"></i>');
+                  } 
                   for (let i = 0; i < väärät.length; i++) {
-                     document.getElementById("tulokset").innerHTML+=
-                     '<i class="fa fa-star-o" aria-hidden="true"></i>'
+                     $("#modal-body").append('<i class="fa fa-star-o" aria-hidden="true"></i>');
                   }   
-               }
+                  $("#modal-title").html("Arvosana:");
+                  $("#modal-body").addClass("big_font text-center");
+                  $("#ilmoitus").modal("show");
+               
    
-      $("#tarkista").prop("disabled",true);
+      //$("#tarkista").prop("disabled",true);
      
    
       }); 

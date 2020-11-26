@@ -50,13 +50,13 @@ label:hover {
     color: yellow;
 }
 
-#tulokset {
+/* #tulokset {
     background-color: white;
     border-radius: 20px;
     border-style: dotted;
     border-color: black;
 
-}
+} */
 
 
 
@@ -69,3 +69,6 @@ form {
     border-radius: 10px;
 }
 
+/* #modal-body {
+    font-size: xx-large;
+} */
