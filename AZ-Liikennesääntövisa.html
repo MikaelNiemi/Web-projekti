@@ -65,7 +65,7 @@
                 <form>
                     <div class="form-check">
                         <input type="radio" name="kysymys1" id="juokse1" class="kysymys" value="0">
-                        <label for="juokse1" class="form-check-label">Saa juosta tien yli.</label>
+                        <label for="juokse1" class="form-check-label">Saat juosta tien yli.</label>
                     </div>
 
                     <div class="form-check">
@@ -76,12 +76,12 @@
 
                     <div class="form-check">
                         <input type="radio" name="kysymys1" id="mene1" class="kysymys" value="0">
-                        <label for="mene1" class="form-check-label">Saa ylittää tien, jos ei näy autoja.</label>
+                        <label for="mene1" class="form-check-label">Saat ylittää tien, jos ei näy autoja.</label>
                     </div>
                 </form>
             </div>
             <div class="col-12 col-md-6">
-                <h5>Vastaus: Kysymys 1</h5>
+                <h5>Vastaus 1:</h5>
                 <p id="vastaus1" class="piilossa"></p>
             </div>
         </section>
@@ -110,7 +110,7 @@
                 </form>
             </div>
             <div class="col-12 col-md-6">
-                <h5>Vastaus: Kysymys 2</h5>
+                <h5>Vastaus 2:</h5>
                 <p id="vastaus2" class="piilossa"></p>
             </div>
         </section>
@@ -136,7 +136,7 @@
                 </form>
             </div>
             <div class="col-12 col-md-6">
-                <h5>Vastaus: Kysymys 3</h5>
+                <h5>Vastaus 3:</h5>
                 <p id="vastaus3" class="piilossa"></p>
             </div>
         </section>
@@ -164,7 +164,7 @@
                 </form>
             </div>
             <div class="col-12 col-md-6">
-                <h5>Vastaus: Kysymys 4</h5>
+                <h5>Vastaus 4:</h5>
                 <p id="vastaus4" class="piilossa"></p>
             </div>
         </section>
@@ -190,7 +190,7 @@
                 </form>
             </div>
             <div class="col-12 col-md-6">
-                <h5>Vastaus: Kysymys 5</h5>
+                <h5>Vastaus 5:</h5>
                 <p id="vastaus5" class="piilossa"></p>
             </div>
         </section>
@@ -209,6 +209,22 @@
 
         </footer>
     </main>
+    <div class="modal" tabindex="-1" role="dialog" id="result_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-body"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Katso vastaukset</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

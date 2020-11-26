@@ -37,7 +37,8 @@ $(document).ready(function () {
             $("#vastaus1").removeClass("piilossa").html("Väärin! Odotat vihreän valon syttymistä.");
         } else {
 
-            return alert("Kysymys 1: Vastaus puuttuu");
+            alert("Kysymys 1: Vastaus puuttuu");
+            return;
         }
 
 
@@ -61,7 +62,8 @@ $(document).ready(function () {
                 "on turvallinen.");
         } else {
 
-            return alert("Kysymys 2: Vastaus puuttuu");
+            alert("Kysymys 2: Vastaus puuttuu");
+            return;
         }
 
         //Kysymys 3 tarkistus
@@ -82,7 +84,8 @@ $(document).ready(function () {
             $("#vastaus3").removeClass("piilossa").html("Väärin! Kypärän pitää olla päässä huolellisesti kiinnitettynä.");
         } else {
 
-            return alert("Kysymys 3: Vastaus puuttuu");
+            alert("Kysymys 3: Vastaus puuttuu");
+            return;
         }
 
         //Kysymys 4 tarkistus
@@ -105,7 +108,8 @@ $(document).ready(function () {
                 " soittokelloa ja varmistat, että ohittaminen on turvallista.");
         } else {
 
-            return alert("Kysymys 4: Vastaus puuttuu");
+            alert("Kysymys 4: Vastaus puuttuu");
+            return;
         }
 
         //Kysymys 5 tarkistus
@@ -126,13 +130,20 @@ $(document).ready(function () {
             $("#vastaus5").removeClass("piilossa").html("Väärin! Uuden lain mukaan pitää olla etu- ja takavalot.");
         } else {
 
-            return alert("Kysymys 5: Vastaus puuttuu");
+            alert("Kysymys 5: Vastaus puuttuu");
+            return;
         }
 
         if (hyvä === 5) {
-            alert("Onnea, sait" + hyvä + "/5! :)");
+            $("#modal-title").html("Yhteenveto:");
+            $("#modal-body").html("Onnea! Sait " + hyvä + "/5! :)");
+            $("#result_modal").modal("show");
+            //alert("Onnea, sait" + hyvä + "/5! :)");
         } else {
-            alert("Vastattu oikein: " + hyvä + "/5. Yritä uudelleen.");
+            $("#modal-title").html("Yhteenveto:");
+            $("#modal-body").html("Vastattu oikein: " + hyvä + "/5.");
+            $("#result_modal").modal("show");
+            //alert("Vastattu oikein: " + hyvä + "/5. Paina OK, näet omat vastauksesi.");
         }
 
     });
