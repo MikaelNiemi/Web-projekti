@@ -1,4 +1,8 @@
 
+/*Visaan saatu inspiraatiota tältä videolta: https://www.youtube.com/watch?v=riDzcEQbX6k
+Koodia ei ole kuitenkaan suoraan kopioitu videosta vaan kaikki on sovellettu itse omiin tarkoituksiin.*/
+
+
 //Kysymykset ja vastaukset taulukossa.
 const questions = [
     {
@@ -71,23 +75,14 @@ $(document).ready(function () {
     let vastattu = 0
     let oikein = 0
 
-    //Visan aloitus.
-    $("#start-btn").click(function () {
-        setQuestion()
-    });
-
-    //Funktio satunnaisluvun generoimiseksi
-    function getRndInteger(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    };
-
     //Funktio kysymysten järjestyksen satunnaistamiseksi
     function setQuestion() {
         let random = getRndInteger(0, questions2.length - 1)
         $("#start-btn").addClass("hide")
+        $("#info").addClass("hide")
         $("#answers").removeClass("hide")
         $("#question").removeClass("hide")
-        $("#info").addClass("hide")
+
         $("#question").html(questions2[random].question)
         $("#answer").html(info2[random])
         $("#image").html(images2[random])
@@ -121,6 +116,18 @@ $(document).ready(function () {
         $("#next").addClass("hide")
     };
 
+
+    //Funktio satunnaisluvun generoimiseksi
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    //Visan aloitus.
+    $("#start-btn").click(function () {
+        setQuestion()
+    });
+
+
     //Funktio vastauksille. Riippuen siitä onko vastaus väärin vai oikein, värjätään tulos sen mukaisesti.
     $("#answers button").click(function () {
         $(".correct").prop("disabled", true)
@@ -147,8 +154,8 @@ $(document).ready(function () {
             $("#question").addClass("hide")
             $("#answer").addClass("hide")
             $("#next").addClass("hide")
-            $("#reset").removeClass("hide")
             $("#image").addClass("hide")
+            $("#reset").removeClass("hide")
             $("#prize").removeClass("hide")
             $("#results").removeClass("hide")
             $("#results").append(`<h1>Sait ${oikein}/5 oikein!</h1>`)
