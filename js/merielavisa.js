@@ -1,5 +1,5 @@
-const oikein = "Oikein"
-const vaarin = "Väärin"
+const oikein = "Oikein";
+const vaarin = "Väärin";
 
 $(document).ready(function(){
 
