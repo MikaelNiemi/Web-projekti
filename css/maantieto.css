@@ -1,0 +1,71 @@
+
+
+
+label:hover {
+    font-weight: bold;
+}
+
+#intro {
+    background-color: white;
+    border-radius: 20px;
+    border-style: dotted;
+    border-color: black;
+}
+
+.vihreä {
+    background-color: #40bf40;
+  
+}
+
+.punainen {
+    background-color: #ff3333;
+    
+}
+
+.valkoinen {
+    color: white;
+}
+
+.valinta {
+    background-color: rosybrown;
+}
+
+.btn-purple {
+    background-color: #9c33ff;
+    color: white;
+
+}
+
+.big_font  {
+    font-size: 60px;
+    
+}
+
+.fa-star {
+    color: yellow
+
+}
+
+.fa-star-o {
+    color: yellow;
+}
+
+#tulokset {
+    background-color: white;
+    border-radius: 20px;
+    border-style: dotted;
+    border-color: black;
+
+}
+
+
+
+h4 {
+    text-decoration: underline;
+    
+}
+
+form {
+    border-radius: 10px;
+}
+

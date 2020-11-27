@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etusivu</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/yhteinen.css">
+    <link rel="stylesheet" href="css/lintuvisa.css">
+</head>
+
+<body>
+    <main class="container">
+        <header class="row ">
+            <div class="col-12 mx-auto p-0 mt-2 border-dark">
+                <h1 class="text-center">Web-projekti Study Group 7</h1>
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark mx-0">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Etusivu<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tietoja.html">Tietoja</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tietovisat
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="JukkaK-elainvisa.html">Eläinvisa</a>
+                                    <a class="dropdown-item" href="lintuvisa.html">Lintuvisa</a>
+                                    <a class="dropdown-item" href="luontovisa.html">Luontovisa</a>
+                                    <a class="dropdown-item" href="maantieto.html">Maantietovisa</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Muut sivut
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Placeholder</a>
+                                </div>
+                            </li>
+                </nav>
+            </div>
+        </header>
+        <section class="row mx-auto mt-2">
+
+            <div class="visasta ml-sm-3 mt-sm-3 mr-sm-3 mb-sm-3 ml-xl-5">
+                <h2 class="text-center ">Lintuvisa</h2>
+                <p>Tässä visassa on viisi kysymystä linnuista. Jokaisessa kysymyksessä on viisi vastausta, joista yksi on oikein. Visan lopussa näet tuloksesi.</p>
+            </div>
+            <div>
+                <div class="row">
+                    
+                    <!--kansallislintu-->
+                    <div class=" col-sm-12 col-md-6">
+                        <h3 class="kysymys_otsikko">Mikä on Suomen kansallislintu?</h3>
+                        <form class="formi">
+
+                            <div>
+                                <label for="varis">
+                                <input type="radio" name="kansallislintu" id="varis" value="2">
+                                    Varis
+                                </label>
+                            </div>
+
+                            <div>
+                                <label  for="joutsen">
+                                <input type="radio" name="kansallislintu" id="joutsen"
+                                    value="1">
+                                    Joutsen
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="kurki">
+                                <input type="radio" name="kansallislintu" id="kurki" value="2">
+                                    Kurki
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="sorsa"> 
+                                <input type="radio" name="kansallislintu" id="sorsa" value="2">     
+                                Sorsa
+                            </label>
+                            </div>
+
+                            <div class="mt-3 mr-sm-3">
+                                <p class="invisible" id="tulos"></p>
+                            </div>
+                    </div>
+                    
+                    <div class="col-sm-12 mt-md-5 col-md-6">
+                        <figure>
+                            <img class="img-fluid" src="img/sorsia.jpg" alt="">
+                            <figcaption>
+                                <address>Lähde: <a
+                                        href="https://pixabay.com/fi/photos/haapana-ankka-veden-bird-el%C3%A4inten-4914971/"
+                                        target="_blank">Pixabay</a></address>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    </form>
+
+                    <!--nopein lintu-->
+                    <div class=" col-sm-12 col-md-6">
+                        <h3 class="kysymys_otsikko">Mikä on maailman nopein lintu?</h3>
+                        <form class="formi">
+
+                            <div>
+                                <label for="muuttohaukka">
+                                <input type="radio" name="nopeinlintu" id="muuttohaukka"
+                                    value="1">
+                                    Muuttohaukka
+                                </label>
+                            </div>
+
+                            <div> 
+                                <label for="isopunasotka">
+                                <input type="radio" name="nopeinlintu" id="isopunasotka"
+                                    value="2">
+                                Isopunasotka
+                                </label>
+                            </div>
+
+                            <div> 
+                                <label for="kynsihanhi">
+                                <input type="radio" name="nopeinlintu" id="kynsihanhi"
+                                    value="2">
+                                 Kynsihanhi
+                                </label>
+                            </div>
+
+                            <div> 
+                                <label for="tervapaasky">
+                                <input type="radio" name="nopeinlintu" id="tervapaasky"
+                                    value="2">
+                                    Tervapääsky
+                                </label>
+                            </div>
+
+                            <div class="mt-3 mr-sm-3">
+                                <p class="invisible" id="tulos2"></p>
+                            </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 mt-md-5">
+                        <figure>
+                            <img class="img-fluid" src="img/haukka.jpg" alt="">
+                            <figcaption>
+                                <address>Lähde: <a
+                                        href="https://pixabay.com/fi/photos/valkop%C3%A4%C3%A4merikotka-bird-of-prey-4575704/"
+                                        target="_blank">Pixabay</a></address>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    </form>
+
+
+                    <!--Rauhan symboli-->
+                    <div class=" col-sm-12 col-md-6">
+                        <h3 class="kysymys_otsikko">Mitä lintua pidetään rauhan symbolina?</h3>
+                        <form class="formi">
+
+                            <div>
+                                <label for="harakka">
+                                <input type="radio" name="rauhanlintu" id="harakka" value="2">
+                                    Harakka
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="varpunen">
+                                <input type="radio" name="rauhanlintu" id="varpunen" value="2">
+                                    Varpunen
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="joutsen2">
+                                <input type="radio" name="rauhanlintu" id="joutsen2" value="2">
+                                    Joutsen
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="kyyhky">
+                                <input type="radio" name="rauhanlintu" id="kyyhky" value="1">
+                                    Kyyhky
+                                </label>
+                            </div>
+
+                            <div class="mt-3 mr-sm-3">
+                                <p class="invisible" id="tulos3"></p>
+                            </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 mt-md-5">
+                        <figure>
+                            <img class="img-fluid" src="img/joutsen.jpg" alt="">
+                            <figcaption>
+                                <address>Lähde: <a
+                                        href="https://pixabay.com/fi/photos/swan-lintu-luonne-el%C3%A4inten-white-839598/"
+                                        target="_blank">Pixabay</a></address>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    </form>
+
+                    <!--Mistä kiivit on-->
+                    <div class=" col-sm-12 col-md-6">
+                        <h3 class="kysymys_otsikko">Mistä maasta kiivit ovat peräisin?</h3>
+                        <form class="formi">
+
+                            <div>
+                                <label for="albania">
+                                <input type="radio" name="kiivitmista" id="albania" value="2">
+                                    Albaniasta
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="uus_seelanti">
+                                <input type="radio" name="kiivitmista" id="uus_seelanti"
+                                    value="1">
+                                    Uudesta-Seelannista
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="suomi">
+                                <input type="radio" name="kiivitmista" id="suomi" value="2">
+                                    Suomesta
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="japani">
+                                <input type="radio" name="kiivitmista" id="japani" value="2">
+                                    Japanista
+                                </label>
+                            </div>
+
+                            <div class="mt-3 mr-sm-3">
+                                <p class="invisible" id="tulos4"></p>
+                            </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 mt-md-5">
+                        <figure>
+                            <img class="img-fluid" src="img/kiivi_patsas.jpg" alt="">
+                            <figcaption>
+                                <address>Lähde: <a
+                                        href="https://pixabay.com/fi/photos/uusi-seelanti-kiivi-queenstown-1663440/"
+                                        target="_blank">Pixabay</a></address>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    </form>
+
+
+                    <!--Pöllön elinikä-->
+                    <div class=" col-sm-12 col-md-6">
+                        <h3 class="kysymys_otsikko">Kuinka vanhaksi pöllö elää?</h3>
+                        <form class="formi">
+
+                            <div>
+                                <label for="kolme">
+                                <input type="radio" name="pollonika" id="kolme" value="2">
+                                    3-vuotiaaksi
+                                </label>
+                            </div>
+
+                            <div> 
+                                <label for="viisi">
+                                <input type="radio" name="pollonika" id="viisi" value="2">
+                                    5-vuotiaaksi
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="kymmenen">
+                                <input type="radio" name="pollonika" id="kymmenen" value="1">
+                                    10-vuotiaaksi
+                                </label>
+                            </div>
+
+                            <div> 
+                                <label for="kaksikymment">
+                                <input type="radio" name="pollonika" id="kaksikymment"
+                                    value="2">
+                                    20-vuotiaaksi
+                                </label>
+                            </div>
+
+                            <div class="mt-3 mr-sm-3">
+                                <p class="invisible" id="tulos5"></p>
+                            </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 mt-md-5">
+                        <figure>
+                            <img class="img-fluid" src="img/owl.jpg" alt="">
+                            <figcaption>
+                                <address>Lähde: <a
+                                        href="https://pixabay.com/fi/photos/el%C3%A4inten-lintu-kentt%C3%A4-kukat-ruoho-1845060/"
+                                        target="_blank">Pixabay</a></address>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    </form>
+
+                </div>
+                <div class="text-center">
+                    <p class="tulosyht"> Tulos: <span id="total"></span></p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="row mx-auto">
+
+        </footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="js/lintuvisa.js"></script>
+</body>
+
+</html>

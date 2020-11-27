@@ -1,0 +1,50 @@
+#trivia {
+  border: 3px gray groove;
+  
+}
+
+#question {
+  padding-top: 2px;
+}
+
+#questionbox {
+  border: 4px black solid;
+
+  background-color: white;
+}
+
+#palkinto {
+  border: 4px black solid;
+
+  width: fit-content;
+  height: fit-content;
+  
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 0px;
+}
+
+.answerbox {
+  border: 2px gray solid;
+  margin-top: 1em;
+
+  background-color: white;
+}
+
+.answerbox p {
+  margin: 0px;
+}
+
+/* luokat jotka asetetaan elementille kun vastaus on valittu */
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}
+
+/* Piilossa class */
+.piilossa {
+  display: none;
+}

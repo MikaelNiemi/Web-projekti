@@ -1,0 +1,64 @@
+
+/**#quizapp-container{
+    background-color: #fffafa;
+    margin: auto;
+    border-radius: 5px;
+}**/
+
+.hide{
+    display: none;
+}
+
+main{
+    padding-bottom: 30px ;
+    border-radius: 5px;
+}
+
+.answer{
+margin-top: 5px;
+margin-bottom: 5px;
+border-radius: 0px;
+}
+
+.btn:disabled{
+    opacity: 1
+}
+
+#answer{
+    background: #8d8dff;
+    border-radius: 5px ;
+    color: snow;
+    border: #5a5ada 3px solid;
+}
+
+#answers button{
+    background-color:#8080ff;
+
+}
+#answers button:hover{
+    background-color:#5454ce;
+}
+
+#answers button:disabled{
+    background-color:#8080ff;
+}
+
+
+img{
+    border-radius: 5px;
+    border: #5a5ada solid 3px;
+}
+
+button{
+    text-align: center;
+    width: 95px;
+    height: 50px;
+}
+
+#prize img{
+    border: none;
+}
+
+p{
+    margin-bottom: 6px;
+}

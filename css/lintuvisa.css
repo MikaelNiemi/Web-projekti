@@ -1,0 +1,68 @@
+.formi {
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 20px;
+}
+.kysymys_otsikko {
+    font-size: 26px;
+    margin-left: 20px;
+    margin-top: 15px;
+    text-decoration: underline wavy;
+}
+.tulosyht {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.visasta{
+    border: 3px solid #710193;
+    border-radius: 10px;
+    background-color: #C58BE7;
+    padding: 20px;
+}
+h2 {
+    font-style: italic;
+    text-decoration:underline dotted;
+}
+.oikea_vastaus {
+    background-color: #98FB98;
+    font-weight: bold;
+}
+.vaara_vastaus {
+    background-color: indianred;
+}
+
+figure{
+    margin: 20px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+address {
+    font-style: italic;
+}
+
+a, a:hover, a:visited {
+    color: gray;
+}
+
+.vastaus_laatikko {
+    border: 3px solid #710193;
+    border-radius: 15px;
+    background-color: #C58BE7;
+    padding: 5px;
+}
+
+label {
+    display:block;
+    background:rgba(160, 105, 177, 0.63);
+    border:2px solid rgb(63, 4, 82); 
+    padding:10px;
+    border-radius: 15px;
+    margin:10px;
+    max-width: 400px;
+    cursor: pointer; }
