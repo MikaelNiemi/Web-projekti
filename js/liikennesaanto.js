@@ -14,6 +14,7 @@ $(document).ready(function () {
         });
 
     });
+    
 
     // lasketaan oikeita vastauksia
     let hyvä = 0;
