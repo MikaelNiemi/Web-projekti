@@ -1,6 +1,9 @@
 
-/*Visaan saatu inspiraatiota tältä videolta: https://www.youtube.com/watch?v=riDzcEQbX6k
-Koodia ei ole kuitenkaan suoraan kopioitu videosta vaan kaikki on sovellettu itse omiin tarkoituksiin.*/
+/*
+Visaan saatu inspiraatiota tältä videolta: https://www.youtube.com/watch?v=riDzcEQbX6k
+Koodia ei ole kuitenkaan suoraan kopioitu videosta vaan kaikki on sovellettu itse omiin tarkoituksiin.
+Tekijä: Jyri Ahola
+*/
 
 
 //Kysymykset ja vastaukset taulukossa.
@@ -88,10 +91,8 @@ $(document).ready(function () {
         $("#image").html(images2[random])
 
         for (let i = 0; i < 4; i++) {
-            //Poistetaan vanhat luokat vastauksista ensin
             $(`#answer-${i}`).removeClass("correct")
             $(`#answer-${i}`).removeClass("false")
-            //Lisätään uudet luokat vastauksille sen mukaan onko vastaus oikein vain väärin
             $(`#answer-${i}`).html(questions2[random].answer[i].text)
             if (questions2[random].answer[i].correct === true) {
                 $(`#answer-${i}`).addClass("correct")
@@ -99,13 +100,15 @@ $(document).ready(function () {
                 $(`#answer-${i}`).addClass("false")
             }
         }
-        //Poistetaan esitetty kysymys ja vastaus taulukosta. 
         questions2.splice(random, 1)
         info2.splice(random, 1)
         images2.splice(random, 1)
     };
 
-    //Funktio tiettyjen ominaisuuksien nollaamiseksi/piilottamiseksi. Käytetään esim. Kun käyttäjä painaa "Seuraava nappia"
+    /*
+    Funktio tiettyjen ominaisuuksien nollaamiseksi/piilottamiseksi. 
+    Käytetään esim. Kun käyttäjä painaa "Seuraava nappia"
+    */
     function resetProps() {
         $(".correct").prop("disabled", false)
         $(".false").prop("disabled", false)
@@ -137,11 +140,9 @@ $(document).ready(function () {
         $("#image").removeClass("hide")
 
         if ($(this).hasClass("correct")) {
-            $("#correct").removeClass("hide")
             $(this).css("background-color", "#19ba57")
             oikein++
         } else {
-            $("#wrong").removeClass("hide")
             $(this).css("background-color", "#bd3b36")
         }
     });
