@@ -1,0 +1,31 @@
+/* Urheiluvisan css 
+ Jani Leskela*/
+ main{
+     padding: 10px 10px 10px 10px;
+ }
+ div {
+     margin-left: 5px ;
+ }
+ .selected{
+     background-color: grey;
+     color: white;
+ }
+ .wrong {
+     background-color: red;
+ }
+ .right{
+     background-color: rgb(42, 201, 42);
+ }
+
+ .not_visible{
+     display: none;
+ }
+ ul{
+     list-style-type: none;
+    margin: 1px;
+    padding: 1px;
+ }
+ label{
+     width: 8em;
+ }
+ 
