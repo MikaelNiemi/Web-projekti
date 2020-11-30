@@ -148,7 +148,6 @@
           } else {
              vastaamattomat.push(vastaus4);
           }
-
           
           let vastaus5 = $("input[name=kysymys5]:checked").val();
           if (vastaus5 === "oikein") {
@@ -159,50 +158,26 @@
              vastaamattomat.push(vastaus5);
           }
           
-
-
-               // if (vastaamattomat.length > 0) {
-               //    confirm("Sinun tulee vastata ensin kaikkiin kohtiin!");
-               //    return;
-               // } else {
-               //    $("#tulokset").removeClass("invisible");
-               //    for (let j = 0; j < oikeat.length; j++) {
-               //       document.getElementById("tulokset").innerHTML+=
-               //       '<i class="fa fa-star" aria-hidden="true"></i>'
-               //    }
-               //    for (let i = 0; i < väärät.length; i++) {
-               //       document.getElementById("tulokset").innerHTML+=
-               //       '<i class="fa fa-star-o" aria-hidden="true"></i>'
-               //    }   
-               // }
-
-               if (vastaamattomat.length > 0) {
-                  $("#modal-title").html("Virhe:");
-                  $("#modal-body").html("Sinun tulee ensin vastata kaikkiin kohtiin!");
-                  $("#ilmoitus").modal("show");
-                  return;
-               } else {
-                  }
-                  for (let j = 0; j < oikeat.length; j++) {
-                     $("#modal-body").append('<i class="fa fa-star" aria-hidden="true"></i>');
-                  } 
-                  for (let i = 0; i < väärät.length; i++) {
-                     $("#modal-body").append('<i class="fa fa-star-o" aria-hidden="true"></i>');
-                  }   
-                  $("#modal-title").html("Arvosana:");
-                  $("#modal-body").addClass("big_font text-center");
-                  $("#ilmoitus").modal("show");
-               
-   
-      //$("#tarkista").prop("disabled",true);
-     
+            
+// Arvosanan tulostus
+         if (vastaamattomat.length > 0) {
+            $("#modal-title").html("Virhe:");
+            $("#modal-body").html("Sinun tulee ensin vastata kaikkiin kohtiin!");
+            $("#ilmoitus").modal("show");
+            return;
+         } else {
+            }
+            for (let j = 0; j < oikeat.length; j++) {
+               $("#modal-body").append('<i class="fa fa-star" aria-hidden="true"></i>');
+            } 
+            for (let i = 0; i < väärät.length; i++) {
+               $("#modal-body").append('<i class="fa fa-star-o" aria-hidden="true"></i>');
+            }   
+            $("#modal-title").html("Arvosana:");
+            $("#modal-body").addClass("big_font text-center");
+            $("#ilmoitus").modal("show");
    
       }); 
-
-
-
-  
-   
 
 });
 
