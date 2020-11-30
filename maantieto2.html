@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maantieto-visa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/maantieto.css">
+    <link rel="stylesheet" href="css/yhteinen.css">
+</head>
+
+<body>
+    <main class="container">
+        <header class="row">
+            <div class="col-12 mx-auto p-0 mt-2 border-dark">
+                <h1 class="text-center">Web-projekti Study Group 7</h1>
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark mx-0">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Etusivu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sivu #2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sivu #3</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tietovisat
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Visa #1</a>
+                                    <a class="dropdown-item" href="#">Visa #2</a>
+                                    <a class="dropdown-item" href="#">Visa #3</a>
+                                </div>
+                            </li>
+                </nav>
+            </div>
+        </header>
+        <section class="p-5">
+        <section class="row mx-auto mt-2 section-transparent">
+            <div id="intro" class="m-md-3 col-11">
+                <h3 class="col-12 mt-2"><i class="fa fa-globe" aria-hidden="true"></i> Maantieto-visa 2<i class="fa fa-globe" aria-hidden="true"></i></h3>
+                <p class="col-11 mb-2"><b>Tämä visa testaa tietämystäsi eri maista.</b> 
+                    Kysymyksiä on yhteensä viisi, vastaat niihin yksi kerrallaan.</p>
+            </div>
+        </section>
+
+        <section class="d-flex justify-content-center row visa p-md-4" id="taustakuva">
+
+            <div id="kysymys1" class="mantsa col-12 text-center row">
+                <h5 class="col-12 text-center">1. Mikä on Latvian pääkaupunki?</h5>
+                <label class="radio-inline"><input type="radio" name="optradio" value="oikein">Riika</label>
+                <label class="radio-inline"><input type="radio" name="optradio" value="">Lissabon</label>
+                <label class="radio-inline"><input type="radio" name="optradio" value="">Vilna</label>
+            </div>
+
+            <div id="kysymys2" class="mantsa piilossa text-center row col-12">
+                <h5 class="col-12 text-center">2. Mikä on Espanjan valuutta?</h5>
+                <label class="radio-inline"><input type="radio" name="optradio" value="">Peso</label>
+                <label class="radio-inline"><input type="radio" name="optradio" value="">Rupla</label>
+                <label class="radio-inline"><input type="radio" name="optradio" value="oikein">Euro</label>
+            </div>
+            
+            <div id="kysymys3" class="mantsa piilossa text-center row col-12">
+                <h5 class="col-12 text-center">3. Mihin maanosaan kuuluu Argentiina?</h5>
+                <label class="radio-inline"><input type="radio" name="optradio" value="">Afrikka</label>
+                <label class="radio-inline"><input type="radio" name="optradio" value="oikein">Etelä-Amerikka</label>
+                <label class="radio-inline"><input type="radio" name="optradio" value="">Eurooppa</label>
+            </div>
+
+            <div id="kysymys4" class="mantsa piilossa text-center row col-12">
+                <h5 class="col-12 text-center">4. Mikä näistä maista ei kuulu Suomen rajanaapureihin?</h5>
+                <label class="radio-inline"><input type="radio" name="optradio" value="">Venäjä</label>
+                <label class="radio-inline"><input type="radio" name="optradio" value="">Norja</label>
+                <label class="radio-inline"><input type="radio" name="optradio" value="oikein">Tanska</label>
+            </div>
+
+            <div id="kysymys5" class="mantsa piilossa text-center row col-12">
+                <h5 class="col-12 text-center">5. Millä näistä maista on suurin pinta-ala?</h5>
+                <label class="radio-inline"><input type="radio" name="optradio" value="oikein">Venäjä</label>
+                <label class="radio-inline"><input type="radio" name="optradio" value="">Kiina</label>
+                <label class="radio-inline"><input type="radio" name="optradio" value="">Yhdysvallat</label>
+            </div>
+
+            <div id="yhteenveto" class="col-12 row piilossa py-4">
+                <p id="lopputulos" class="text-center col-12"></p>
+                <h6 class="col-12">VASTAUKSESI</h6>
+                <div class="col-12 col-md-4 d-inline row row-cols-12 ml-md-3">
+                    <p id="oma0"></p>
+                    <p id="oma1"></p>
+                    <p id="oma2"></p>
+                    <p id="oma3"></p>
+                    <p id="oma4"></p>
+                </div>
+                <div class="col-12 col-md-5 d-inline row row-cols-12">
+                    <p id="oikea0"></p>
+                    <p id="oikea1"></p>
+                    <p id="oikea2"></p>
+                    <p id="oikea3"></p>
+                    <p id="oikea4"></p>
+                </div>
+                <figure id="palkinto" class="piilossa img-fluid col-12 col-md-3 d-inline"></figure>
+            </div>
+            
+            <button id="lopeta_visa" type="button" class="mt-3 btn btn-tausta piilossa">Lopeta visa</button>
+            <button id="seuraava" type="button" class="mt-3 btn btn-tausta" disabled>Seuraava</button>
+        </section>
+    </section>
+
+        <footer class="row mx-auto">
+
+        </footer>
+    </main>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="js/maantieto2.js"></script>
+</body>
+
+</html>

@@ -1,3 +1,17 @@
+/* Maantieto 1 */
+
+body, html {
+    height: 100%; 
+  }
+
+.mantsa {
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+opacity: 1 !important;
+}
 
 
 
@@ -50,13 +64,6 @@ label:hover {
     color: yellow;
 }
 
-/* #tulokset {
-    background-color: white;
-    border-radius: 20px;
-    border-style: dotted;
-    border-color: black;
-
-} */
 
 
 
@@ -69,6 +76,85 @@ form {
     border-radius: 10px;
 }
 
-/* #modal-body {
-    font-size: xx-large;
-} */
+
+
+/* Maantieto 2 */
+
+.section-transparent {
+    background-color: transparent !important;
+}
+
+.piilossa {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.visa {
+    border-radius: 50px;
+    border-style:solid;
+    border-color: #ccccff;
+    border-width: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.radio-inline {
+    margin-left: 40px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#taustakuva {
+background-image: url("../img/kartta.png");
+height: 100%;
+/* background-attachment: fixed; */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+border-style: solid;
+border-width: 5px;
+border-color: white;
+
+}
+
+.mantsa label,
+.mantsa h5
+{
+background-color: black;
+border-radius: 10px;
+}
+
+.btn-tausta {
+    background-color: gray;
+    font-weight: bold;
+}
+
+#lopputulos {
+    color: black;
+    background: white;
+    opacity: 1 !important;
+    padding: 10px;
+}
+
+#yhteenveto {
+    height: 100%;
+    left: 0%;
+    text-align: left !important;
+    color: black;
+    background-color: white;
+    border-radius: 50px ;
+    opacity: 1; 
+}
+
+.fa-times {
+    color: #ff3333;
+}
+
+.fa-check {
+    color: #40bf40;
+}
