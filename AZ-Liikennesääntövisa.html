@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liikennesääntövisa</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/yhteinen.css">
+    <link rel="stylesheet" href="css/liikennesaanto.css">
+    <meta content="Alina Zinchenko" name="author">
+</head>
+
+<body>
+    <main class="container">
+        <header class="row">
+            <div class="col-12 mx-auto mt-2 border-dark">
+                <h1>Web-projekti Study Group 7</h1>
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Etusivu<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sivu #2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sivu #3</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tietovisat
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Visa #1</a>
+                                    <a class="dropdown-item" href="#">Visa #2</a>
+                                    <a class="dropdown-item" href="#">Visa #3</a>
+                                </div>
+                            </li>
+                </nav>
+            </div>
+        </header>
+        <section class="row mx-auto">
+            <div class="col-12">
+                <h2>Liikennesääntövisa</h2>
+            </div>
+            <div class="col-12 col-md-6">
+                <p>Teksti </p>
+            </div>
+            <div class="col-12 col-md-4">
+                <figure>
+                    <img class="img-fluid" src="img/Liikenne_Oulu.JPG" alt="Katu Oulussa">
+                    <figcaption>Liikenne Oulussa. By Estormiz - Own work, CC0, <a
+                            href="https://commons.wikimedia.org/w/index.php?curid=36913816" target="_blank">Wikimedia
+                            Commons</a> </figcaption>
+                </figure>
+            </div>
+            <div class="col-12">
+                <h3>Kysymykset</h3>
+            </div>
+        </section>
+
+        <section class="row questions">
+            <div class="col-12 col-md-6">
+                <h5>1. Mitä tarkoittaa punainen valo liikennevaloissa?</h5>
+                <form>
+                    <div class="form-check">
+                        <input type="radio" name="kysymys1" id="juokse1" class="kysymys" value="0">
+                        <label for="juokse1" class="form-check-label">Saat juosta tien yli.</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" name="kysymys1" id="pysähdy1" class="kysymys" value="1">
+                        <label for="pysähdy1" class="form-check-label">Pitää pysähtyä ja odottaa vihreän valon
+                            syttymistä.</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" name="kysymys1" id="mene1" class="kysymys" value="0">
+                        <label for="mene1" class="form-check-label">Saat ylittää tien, jos ei näy autoja.</label>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-md-6">
+                <h5>Vastaus 1:</h5>
+                <p id="vastaus1" class="piilossa"></p>
+            </div>
+        </section>
+
+        <section class="row questions">
+            <div class="col-12 col-md-6">
+                <h5>2. Mitä teet, kun aiot ylittää suojatien ja näet auton lähestyvän?</h5>
+                <form>
+                    <div class="form-check">
+                        <input type="radio" name="question2" id="juokse2" class="kysymys" value="0">
+                        <label for="juokse2" class="form-check-label">Juokset äkkiä tien yli, vielä ehdit!</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" name="question2" id="katso2" class="kysymys" value="0">
+                        <label for="katso2" class="form-check-label">Katsot molempiin suuntiin ja lähdet
+                            ylittämään.</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" name="question2" id="odota2" class="kysymys" value="1">
+                        <label for="odota2" class="form-check-label">
+                            Odotat kunnes auto pysähtyy, katsot molempiin suuntiin ja varmistat, että tien ylitys on
+                            turvallinen.</label>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-md-6">
+                <h5>Vastaus 2:</h5>
+                <p id="vastaus2" class="piilossa"></p>
+            </div>
+        </section>
+
+        <section class="row questions">
+            <div class="col-12 col-md-6">
+                <h5>3. Missä kypärän pitää olla pyöräillessä?</h5>
+                <form>
+                    <div class="form-check">
+                        <input type="radio" name="question3" id="kotona3" class="kysymys" value="0">
+                        <label for="kotona3" class="form-check-label">Kotona.</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" name="question3" id="roikkumassa3" class="kysymys" value="0">
+                        <label for="roikkumassa3" class="form-check-label">Ohjaustangossa roikkumassa.</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" name="question3" id="päässä3" class="kysymys" value="1">
+                        <label for="päässä3" class="form-check-label">Päässä huolellisesti kiinnitettynä.</label>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-md-6">
+                <h5>Vastaus 3:</h5>
+                <p id="vastaus3" class="piilossa"></p>
+            </div>
+        </section>
+
+        <section class="row questions">
+            <div class="col-12 col-md-6">
+                <h5>4. Mitä on hyvä tehdä, jos aikoo ohittaa jalankulkijan pyörällä?</h5>
+                <form>
+                    <div class="form-check">
+                        <input type="radio" name="question4" id="soittokello4" class="kysymys" value="1">
+                        <label for="soittokello4" class="form-check-label">Varoitat jalankulkijaa soittamalla
+                            soittokelloa ja varmistat, että ohittaminen on turvallista.</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" name="question4" id="kissankello4" class="kysymys" value="0">
+                        <label for="kissankello4" class="form-check-label">Varoitat jalankulkijaa soittamalla
+                            kissankelloa.</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" name="question4" id="ohita4" class="kysymys" value="0">
+                        <label for="ohita4" class="form-check-label">Et tee mitään, lähdet vain ohittamaan.</label>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-md-6">
+                <h5>Vastaus 4:</h5>
+                <p id="vastaus4" class="piilossa"></p>
+            </div>
+        </section>
+
+        <section class="row questions">
+            <div class="col-12 col-md-6">
+                <h5>5. Pitääkö pyörässä olla valot?</h5>
+                <form>
+                    <div class="form-check">
+                        <input type="radio" name="question5" id="ei5" class="kysymys" value="0">
+                        <label for="ei5" class="form-check-label">Ei.</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" name="question5" id="etuvalo5" class="kysymys" value="0">
+                        <label for="etuvalo5" class="form-check-label">Joo, etuvalo.</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" name="question5" id="joo5" class="kysymys" value="1">
+                        <label for="joo5" class="form-check-label">Joo, etu- ja takavalot.</label>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-md-6">
+                <h5>Vastaus 5:</h5>
+                <p id="vastaus5" class="piilossa"></p>
+            </div>
+        </section>
+
+        <section class="row questions">
+            <div class="col-12 yhteenveto">
+                <button type="button" id="yhteenveto" class="btn btn-outline-success mb-3 mt-2"><i
+                        class="fa fa-check-square-o" aria-hidden="true"></i> Tarkista</button>
+
+                <button type="button" id="yritä" class="btn btn-outline-info mb-3 mt-2"><i class="fa fa-refresh"
+                        aria-hidden="true"></i> Yritä uudelleen</button>
+            </div>
+        </section>
+
+        <footer class="row mx-auto">
+
+        </footer>
+    </main>
+    <div class="modal" tabindex="-1" role="dialog" id="result_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-body"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Katso vastaukset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="js/liikennesaanto.js"></script>
+</body>
+
+</html>

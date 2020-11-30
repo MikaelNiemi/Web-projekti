@@ -142,4 +142,9 @@ $(document).ready(function() {
             valinnat5.prop("disabled", true)
         })
     })
-})
+
+    $('#uusi_yritys').click(function() {
+        location.reload();
+        $('html,body').scrollTop(0);
+    })
+}) 

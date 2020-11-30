@@ -1,0 +1,31 @@
+/* Tekijä: Alina Zinchenko*/
+
+.questions {
+    margin: 1em;
+}
+
+.valittu {
+    font-weight: bold;
+}
+
+.oikein {
+    background-color: #47d147;
+    color: white;
+}
+
+.väärin {
+    background-color: #ff3333;
+}
+
+.piilossa {
+    display: none;
+}
+
+.palkinto {
+    color: gold;
+}
+
+.yhteenveto {
+    margin: auto;
+    width: 60%;
+}
