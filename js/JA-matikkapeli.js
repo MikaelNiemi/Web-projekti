@@ -55,7 +55,7 @@ $(document).ready(function () {
         $("#start-btn").addClass("hide")
         $("#answer-btn").removeClass("hide")
         questions = $("#answerField").val()
-        left = questions
+        left = questions-1
         $("#answerField").val("")
         getCalculation()
         console.log(questions)
@@ -64,13 +64,19 @@ $(document).ready(function () {
 
     $("#next-btn").click(function () {
         $("#result").html("")
+        $("#rightAnswer").html("")
         $("#math").html("")
+        $("#correct").addClass("hide")
+        $("#wrong").addClass("hide")
+        $("#answerField").attr("Disabled", false)
         answered++
         left--
         if(answered == questions){
             $("#next-btn").addClass("hide")
             $("#answerField").addClass("hide")
             $("#questions").html(`Vastasit ${correct}/${questions} oikein!`)
+            $("#reset").removeClass("hide")
+
         }else{
             $("#next-btn").addClass("hide")
             $("#answer-btn").removeClass("hide")
@@ -91,15 +97,16 @@ $(document).ready(function () {
             alert("Please enter your answer")
             return
         }
+        $("#answer-btn").addClass("hide")
+        $("#next-btn").removeClass("hide")
+        $("#answerField").attr("Disabled", true)
         if (answer == calculation) {
-            $("#answer-btn").addClass("hide")
-            $("#next-btn").removeClass("hide")
-            $("#result").html("oikein")
+            $("#correct").removeClass("hide")
             correct++
         } else {
-            $("#answer-btn").addClass("hide")
-            $("#next-btn").removeClass("hide")
-            $("#result").html("väärin")
+            $("#wrong").removeClass("hide")
+            $("#rightAnswer").removeClass("hide")
+            $("#rightAnswer").html(calculation)
         }
 
     })
