@@ -139,11 +139,13 @@ $(document).ready(function () {
             $("#modal-title").html("Yhteenveto:");
             $("#modal-body").html("Onnea! Sait " + hyvä + "/5! :)");
             $("#result_modal").modal("show");
+            $("#ykkönen").removeClass("piilossa");
             //alert("Onnea, sait" + hyvä + "/5! :)");
-        } else {
+        } else if (hyvä < 2) {
             $("#modal-title").html("Yhteenveto:");
             $("#modal-body").html("Vastattu oikein: " + hyvä + "/5.");
             $("#result_modal").modal("show");
+            $("#huonosti").removeClass("piilossa");
             //alert("Vastattu oikein: " + hyvä + "/5. Paina OK, näet omat vastauksesi.");
         }
 
