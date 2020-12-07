@@ -147,6 +147,11 @@ $(document).ready(function () {
             $("#result_modal").modal("show");
             $("#huonosti").removeClass("piilossa");
             //alert("Vastattu oikein: " + hyvä + "/5. Paina OK, näet omat vastauksesi.");
+        } else {
+            $("#modal-title").html("Yhteenveto:");
+            $("#modal-body").html("Vastattu oikein: " + hyvä + "/5.");
+            $("#result_modal").modal("show");
+            $("#ok").removeClass("piilossa");
         }
 
     });
