@@ -3,13 +3,20 @@ $(document).ready(function(){
     const kysymykset = ["#kysymys1", "#kysymys2", "#kysymys3", "#kysymys4", "#kysymys5"];
     const oikeat = ["Riika", "Euro", "Etelä-Amerikka", "Tanska", "Venäjä"];
     const selitys = ["Latvian pääkaupunki Riika perustettiin vuonna 1201. Väkiluku on noin 630 000.",
-                    "Ennen euroa Espanjassa käytettiin pesetoja. Euroon siirryttiin 1.1.2002.",
+                    "Espanjassa on käytetty euroa 1.1.2002 lähtien. Ennen sitä Espanjassa käytettiin pesetoja.",
                     "Argentiina sijaitsee Etelä-Amerikassa, Atlantin länsirannikolla. Sen pääkaupunki on Buenos Aires.",
-                    "Tanskan rajanaapureita on vain yksi; Saksa. Suomen rajanaapureihin sen sijaan kuuluu Ruotsi, Norja ja Venäjä.",
-                    "Venäjän pinta-ala on huimat 17 100 000 neliökilometriä. Toiseksi suurin on Kanada (9 990 000 neliökilometriä)"];
+                    "Suomen rajanaapureita on 3: Ruotsi, Norja ja Venäjä. Tanskan ainoa rajanaapuri on Saksa.",
+                    "Venäjän pinta-ala on huimat 17 100 000 neliökilometriä. Toiseksi suurin maa on Kanada (9 990 000 neliökilometriä)."];
     let vastaukset = [];
     let esillä = 0;
     let pisteet = 0;
+
+    // Kun aloita-painiketta painetaan, tulee näkyviin ensimmäinen kysymys
+    $("#aloita").click(function(){
+        $("#alku").addClass("piilossa");
+        $("#kysymys1").removeClass("piilossa");
+        $("#seuraava").removeClass("piilossa");
+    });
 
     // Seuraava-painike aktivoituu, kun valitaan yksi vaihtoehdoista
     $("[type=radio]").click(function(){

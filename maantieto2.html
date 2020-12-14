@@ -59,18 +59,22 @@
                 </nav>
             </div>
         </header>
-        <section class="p-5">
-        <section class="row mx-auto mt-2 section-transparent">
-            <div id="intro" class="m-md-3 col-11">
-                <h3 class="col-12 mt-2"><i class="fa fa-globe" aria-hidden="true"></i> Maantieto-visa 2 <i class="fa fa-globe" aria-hidden="true"></i></h3>
-                <p class="col-11 mb-2"><b>Tämä visa testaa tietämystäsi eri maista.</b> 
-                    Kysymyksiä on yhteensä viisi, vastaat niihin yksi kerrallaan.</p>
+        <section class="p-2">
+        <section class="row mx-auto mt-1 section-transparent">
+            <div id="intro" class="m-md-2 row col-12">
+                <h3 class="col-12 mt-2 text-center"><i class="fa fa-globe" aria-hidden="true">
+                    </i> Maantieto-visa 2 <i class="fa fa-globe" aria-hidden="true"></i></h3>
             </div>
         </section>
 
         <section class="d-flex justify-content-center row visa p-md-4" id="taustakuva">
+            <div id="alku" class="mantsa col-12 text-center row">
+                <p class="introteksti col-12 mb-2"><b>Tämä visa testaa tietämystäsi eri maista.</b> 
+                    Kysymyksiä on yhteensä viisi, vastaat niihin yksi kerrallaan.</p>
+                <button id="aloita" type="button" class="mt-3 btn btn-tausta">Aloita visa</button>
+            </div>
 
-            <div id="kysymys1" class="mantsa col-12 text-center row">
+            <div id="kysymys1" class="mantsa piilossa col-12 text-center row">
                 <h5 class="col-12 text-center">1. Mikä on Latvian pääkaupunki?</h5>
                 <label class="radio-inline"><input type="radio" name="optradio" value="oikein">Riika</label>
                 <label class="radio-inline"><input type="radio" name="optradio" value="">Lissabon</label>
@@ -107,32 +111,38 @@
 
             <div id="yhteenveto" class="col-12 row piilossa py-4">
                 <p id="lopputulos" class="text-center col-12"></p>
-                <h6 class="col-12">VASTAUKSESI</h6>
-                <div class="col-12 col-md-4 d-inline row row-cols-12 ml-md-3">
-                    <p id="oma0"></p>
-                    <p id="oma1"></p>
-                    <p id="oma2"></p>
-                    <p id="oma3"></p>
-                    <p id="oma4"></p>
-                </div>
-                <div class="col-12 col-md-5 d-inline row row-cols-12">
-                    <p id="oikea0"></p>
-                    <p id="oikea1"></p>
-                    <p id="oikea2"></p>
-                    <p id="oikea3"></p>
-                    <p id="oikea4"></p>
-                </div>
-                <figure id="palkinto" class="piilossa img-fluid col-12 col-md-3 d-inline"></figure>
+                <figure id="palkinto" class="piilossa img-fluid text-center col-12 col-md-3 d-inline"></figure>
+                
+            <div class="row col">
+                <p id="oma0" class="col-12 col-md-6"></p>
+                <p id="oikea0" class="col-12 col-md-6"></p>
+
+                <p id="oma1" class="col-12 col-md-6"></p>
+                <p id="oikea1" class="col-12 col-md-6"></p>
+
+                <p id="oma2" class="col-12 col-md-6"></p>
+                <p id="oikea2" class="col-12 col-md-6"></p>
+
+                <p id="oma3" class="col-12 col-md-6"></p>
+                <p id="oikea3" class="col-12 col-md-6"></p>
+
+                <p id="oma4" class="col-12 col-md-6"></p>
+                <p id="oikea4" class="col-12 col-md-6"></p>
+            </div>
+                <p class="col-12 ml-2 d-flex align-items-end">Lisätietoa &nbsp;<i class="fa fa-info-circle selitys" 
+                    aria-hidden="true"></i> -painikkeesta</p>
             </div>
             
             <button id="lopeta_visa" type="button" class="mt-3 btn btn-tausta piilossa">Lopeta visa</button>
-            <button id="seuraava" type="button" class="mt-3 btn btn-tausta" disabled>Seuraava</button>
+            <button id="seuraava" type="button" class="mt-3 btn btn-tausta piilossa" disabled>Seuraava</button>
         </section>
     </section>
 
-        <footer class="row mx-auto">
-
-        </footer>
+    <footer class="row mx-auto">
+        <div class="col-12 text-center">
+            <p>Tekijä: Enni Dahlström</p>
+        </div>
+    </footer>
     </main>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
