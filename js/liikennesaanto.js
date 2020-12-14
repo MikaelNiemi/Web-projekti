@@ -21,7 +21,8 @@ $(document).ready(function () {
 
     $("#yhteenveto").click(function () {
 
-        // Kysymys 1 tarkistus: värit, vastaus selitys
+        // Kysymys 1 tarkistus: värit, vastaus selitys, alert
+        
         if ($("#pysähdy1").is(":checked")) {
             $("#pysähdy1").next().addClass("oikein");
             $("#vastaus1").removeClass("piilossa").html("<i class='fa fa-star fa-2x palkinto' aria-hidden='true'></i>Hyvä!");
@@ -41,7 +42,6 @@ $(document).ready(function () {
             alert("Kysymys 1: Vastaus puuttuu");
             return;
         }
-
 
         //Kysymys 2 tarkistus
 
@@ -140,24 +140,20 @@ $(document).ready(function () {
             $("#modal-body").html("Onnea! Sait " + hyvä + "/5! :)");
             $("#result_modal").modal("show");
             $("#ykkönen").removeClass("piilossa");
-            //alert("Onnea, sait" + hyvä + "/5! :)");
         } else if (hyvä < 2) {
             $("#modal-title").html("Yhteenveto:");
             $("#modal-body").html("Vastattu oikein: " + hyvä + "/5.");
             $("#result_modal").modal("show");
             $("#huonosti").removeClass("piilossa");
-            //alert("Vastattu oikein: " + hyvä + "/5. Paina OK, näet omat vastauksesi.");
         } else {
             $("#modal-title").html("Yhteenveto:");
             $("#modal-body").html("Vastattu oikein: " + hyvä + "/5.");
             $("#result_modal").modal("show");
             $("#ok").removeClass("piilossa");
         }
-
     });
 
     $("#yritä").click(function(){
         location.reload();
     });
-
 });
