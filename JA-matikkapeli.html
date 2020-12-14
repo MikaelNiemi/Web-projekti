@@ -58,11 +58,11 @@
                 </nav>
             </div>
         </header>
-        <!-- Luontovisan sektion alku -->
+        <!-- Matikkapelin sektion alku -->
         <section class="row mx-auto pb-5">
             <div class="col-12 text-center mt-3">
                 <h3>Matikkapeli</h3>
-                <!-- Selitys luontovisasta sivun alussa -->
+                <!-- Selitys matikkapelistä sivun alussa -->
             </div>
             <div class="col-2"></div>
             <div id="math-container" class="col-8 text-center pr-2 pl-2 pb-2 pt-2">
@@ -70,8 +70,8 @@
                     <p>Tämä matikkapeli testaa matikan taitojasi</p>
                     <p>Peli esittää sinulle haluamasi määrän kysymyksiä jotka ovat satunnaisia.</p>
                     <p>Kysymyksissä on yhteenlaskuja, vähennyslaskuja, kertolaskuja sekä jakolaskuja.</p>
-                    <p>Syötä kenttään montako kysymystä haluat</p>
                 </div>
+                <!-- Oikean ja väärän vastauksen tulosteet -->
                 <div id="correct"  class="hide">
                     <i class="fa fa-check fa-4x" style="color: green;"></i>
                 </div>
@@ -79,10 +79,11 @@
                     <i class="fa fa-times fa-4x" style="color: red;"></i>
                     <p >Oikea vastaus on: <span id="rightAnswer"></span> </p>
                 </div>
+                <!-- Laskutoimituksen tuloste -->
                 <div>
                     <p id="math"></p>
                 </div>
-                <div>
+                <div class="mt-3">
                     <input id="answerField" type="text">
                 </div>
 
@@ -90,18 +91,20 @@
                 <div id="start" class="col-12 mt-3">
                     <button id="start-btn" type="button" class="btn btn-primary">Aloita</button>
                 </div>
+                <!-- Seuraavan laskutoimituksen painike -->
                 <div id="next" class="col-12 mt-3">
                     <button id="next-btn" type="button" class="btn btn-primary hide">Seuraava</button>
                 </div>
+                <!-- Laskutoimituksen tarkastamisen painike -->
                 <div class="col-12 mt-3">
                     <button id="answer-btn" type="button" class="btn btn-primary hide">Tarkistus</button>
                 </div>
+                <!-- Kohta mihin tulostetaan lopuksi palkinto sekä kohta johon tulostetaan jäljellä olevien kysymysten määrä/oikeiden vastausten määrä. -->
                 <div>
+                    <span class="img-fluid" id="prize"></span>
                     <p id="questions"></p>
                 </div>
-                <div>
-                    <p id="result"></p>
-                </div>
+                <!-- Uudelleen aloituksen painike -->
                 <div>
                     <button id="reset" type="button" class="btn btn-primary hide">Uudestaan</button>
                 </div>
