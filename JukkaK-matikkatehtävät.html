@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/yhteinen.css">
+  <link rel="stylesheet" href="css/JukkaK-matikka.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Matikka Tehtävät</title>
+</head>
+<body>
+  <main class="container">
+    <header class="row ">
+      <div class="col-12 mx-auto p-0 mt-2 border-dark">
+          <h1 class="text-center">Web-projekti Study Group 7</h1>
+          <nav class="navbar navbar-expand-md navbar-dark bg-dark mx-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Etusivu<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tietoja.html">Tietoja</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tietovisat
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="JukkaK-elainvisa.html">Eläinvisa</a>
+                            <a class="dropdown-item" href="lintuvisa.html">Lintuvisa</a>
+                            <a class="dropdown-item" href="luontovisa.html">Luontovisa</a>
+                            <a class="dropdown-item" href="maantieto.html">Maantietovisa</a>
+                            <a class="dropdown-item" href="jani-urheiluvisa.html">Urheiluvisa</a>
+                            <a class="dropdown-item" href="AZ-Liikennesääntövisa.html">Liikennesääntövisa</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Muut sivut
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="JA-matikkapeli.html">Jyrin matikkapeli</a>
+                        </div>
+                    </li>
+        </nav>
+      </div>
+  </header>
+  <section class="row mx-auto mt-2">
+    <div class="col-12 text-center">
+      <div id="asetukset" class="mx-auto laatikko">
+        <h4 class="mx-auto">Asetukset</h4>
+        <hr>
+
+        <form>
+          <p>Valitse laskutyyppi:</p>
+          <input type="radio" name="lasku" id="lasku1" value="yhteen" checked>
+          <label for="lasku1">Yhteenlasku</label>
+
+          <input type="radio" name="lasku" id="lasku2" value="miinus">
+          <label for="lasku2">Vähennyslasku</label>
+
+          <input type="radio" name="lasku" id="lasku3" value="kerto">
+          <label for="lasku3">Kertolasku</label><br>
+
+          <label for="laskumäärä">Kuinka monta laskutoimitusta haluat?</label>
+          <input type="number" name="määrä" id="laskumäärä">
+        </form>
+
+        <button id="aloita">Aloita</button>
+        
+      </div>
+      <div id="laskulaatikko" class="col mx-auto invisible">
+        <h4 class="pt-2">Laskutoimitus <span id="nykyinen"></span>/<span id="max"></span></h4>
+        <div class="row mx-auto">
+          <span id="lauseke"></span>=<input type="number" id="vastaus"><button class="ml-2" id="laskuPainike">Tarkista</button>
+          <i id="oikein" class="fa fa-smile-o fa-2x invisible" aria-hidden="true"></i>
+          <i id="väärin" class="fa fa-frown-o fa-2x invisible" aria-hidden="true"></i>
+           <span id="oikea"></span>
+        </div>
+        <div id="tulokset">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="row mx-auto">
+
+  </footer>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+  <script src="js/JukkaK-matikka.js"></script>
+</body>
+</html>
