@@ -58,7 +58,7 @@ $(document).ready(function(){
             if (vastaukset[i] === oikeat[i]) {
                $("#oma" + i).html(kysymys_nro + ". " + "<i>" + vastaukset[i] + "</i>"
                     + '<i class="fa fa-check" aria-hidden="true"></i>'); 
-               $("#oikea" + i).html("-");
+               $("#oikea" + i).html(" ");
         //      jos ei, tulostetaan rastisymboli ja kerrotaan oikea vastaus
             } else { 
                 $("#oma" + i).html(kysymys_nro + ". " + "<i>" + vastaukset[i] + "</i>"
