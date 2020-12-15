@@ -56,7 +56,10 @@ let kysymykset = [
 $(document).ready(function() {
   uusiKysymys(kysymykset[0]);
 
-  // Syötä tiedot uudelle kysymykselle
+  /**
+   * Syötä tiedot uudelle kysymykselle
+   * @param {String} kysymys 
+   */
   function uusiKysymys(kysymys) {
     nykyinenKysymys = kysymys;
     $("#nextBtn").prop("disabled", true);
@@ -110,7 +113,6 @@ $(document).ready(function() {
   function näytäTulokset() {
     loppu = true;
     $("#tulokset").removeClass("piilossa");
-    $("#palkinto").removeClass("piilossa");
     $(".answerbox").addClass("piilossa");
     $("#questionbox").addClass("piilossa");
     $("#nextBtn").prop("disabled", true);
@@ -135,16 +137,19 @@ $(document).ready(function() {
         oikein++;
       }
     }
-    
+
+    $("#tulosModal").modal('show')
     if(oikein >= 2 && oikein < 4) {
-      $("#palkinto").html("<img src='img/tahti1.png' alt='' />");
-      $("#palkinto").append("<p>" + oikein + " oikein. Parantamisen varaa löytyy.</p>");
+      $("#tulosModal .modal-body").html("<img src='img/tahti1.png' alt='' />");
+      $("#tulosModal .modal-body").append("<p>" + oikein + " oikein. Parantamisen varaa löytyy.</p>");
     } else if(oikein == 4) {
-      $("#palkinto").html("<img src='img/tahti2.png' alt='' />");
-      $("#palkinto").append("<p>" + oikein + " oikein. Melkein kaikki oikein.</p>");
+      $("#tulosModal .modal-body").html("<img src='img/tahti2.png' alt='' />");
+      $("#tulosModal .modal-body").append("<p>" + oikein + " oikein. Melkein kaikki oikein.</p>");
     } else if(oikein == 5) {
-      $("#palkinto").html("<img src='img/tahti3.png' alt='' />");
-      $("#palkinto").append("<p>Kaikki oikein. Hyvin tehty!</p>");
+      $("#tulosModal .modal-body").html("<img src='img/tahti3.png' alt='' />");
+      $("#tulosModal .modal-body").append("<p>Kaikki oikein. Hyvin tehty!</p>");
+    } else {
+
     }
   }
 

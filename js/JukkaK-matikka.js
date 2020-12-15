@@ -57,9 +57,10 @@ $(document).ready(function() {
     }
   }
 
+  // Paljasta tulokset
   function tulokset() {
     $("#tulokset").html("Tulokset: ");
-    $("#tulokset").append("Sait "+oikein+"/"+asetukset.num+" oikein.<br>");
+    $("#tulokset").append("Sait "+oikein+"/"+asetukset.num+" oikein. Alla näet kaikki vastaukset. Oikeat tulokset ovat suluissa.<br>");
     for(let i = 0; i < tuloslista.length; i++) {
       $("#tulokset").append("<br>"+tuloslista[i]);
     }
@@ -85,12 +86,12 @@ $(document).ready(function() {
       if(vastaus === tulos) {
         oikein++;
         $("#oikein").removeClass("invisible");
-        tuloslista.push("<span class='bg-success'>"+$("#lauseke").html()+" = "+vastaus+"</span>");
+        tuloslista.push("<span class='bg-success'>"+$("#lauseke").html()+" = "+vastaus+"</span> ("+tulos+")");
 
       } else {
         $("#väärin").removeClass("invisible");
         $("#oikea").html(" Oikea vastaus on "+tulos);
-        tuloslista.push("<span class='bg-danger'>"+$("#lauseke").html()+" = "+vastaus+"</span>");
+        tuloslista.push("<span class='bg-danger'>"+$("#lauseke").html()+" = "+vastaus+"</span> ("+tulos+")");
       }
       if(lasku < asetukset.num) {
         $("#laskuPainike").html("Seuraava");
