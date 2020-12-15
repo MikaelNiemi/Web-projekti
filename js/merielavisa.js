@@ -118,4 +118,45 @@ $(document).ready(function(){
         $("#kolmas5").prop("disabled", true);
     });
 
+    // oikeiden vastauksien laskeminen
+    let vastaukset = 0;
+
+    $("#lopputulos").click(function(){
+
+        $("#lopputulos").prop("disabled",true);
+
+        if ($("#vastaus1").html() === oikein) {
+            vastaukset++
+        }
+
+        if ($("#vastaus2").html() === oikein) {
+            vastaukset++
+        }
+
+        if ($("#vastaus3").html() === oikein) {
+            vastaukset++
+        }
+
+        if ($("#vastaus4").html() === oikein) {
+            vastaukset++
+        }
+
+        if ($("#vastaus5").html() === oikein) {
+            vastaukset++
+        }
+        
+       // tulostus
+        if (vastaukset <= 3) {
+            $("#tulostus").html(vastaukset + "/5" + " Sinulla on vielä parantamisen varaa.");
+        }
+
+        if (vastaukset === 4) {
+            $("#tulostus").html(vastaukset + "/5" + " Olit niin lähellä!");
+        }
+
+        if (vastaukset === 5) {
+            $("#tulostus").html(vastaukset + "/5" + " Mahtavaa, sait kaikki oikein!");
+        }
+
+    });
 });
