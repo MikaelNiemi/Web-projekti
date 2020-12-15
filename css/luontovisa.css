@@ -1,9 +1,33 @@
+/*Tekijä: Jyri Ahola*/
 
-#quizapp-container{
-    background-color: #fffafa;
-    margin: auto;
+
+/* 
+Yleisten elementtien tyylit
+*/
+main{
+    padding-bottom: 30px ;
     border-radius: 5px;
 }
+
+
+p{
+    margin-bottom: 6px;
+}
+
+img{
+    border-radius: 5px;
+    border: #5a5ada solid 3px;
+}
+
+button{
+    text-align: center;
+    width: 95px;
+    height: 50px;
+}
+
+/*
+Luokkien tyylit
+*/
 
 .hide{
     display: none;
@@ -19,27 +43,29 @@ border-radius: 0px;
     opacity: 1
 }
 
+/*
+Nimettyjen elementtien tyylit
+*/
+
 #answer{
-    background: rgb(88, 88, 88);
+    background: #8d8dff;
     border-radius: 5px ;
     color: snow;
+    border: #5a5ada 3px solid;
 }
 
-img{
-    border-radius: 5px;
-    border: black solid 3px;
+#answers button{
+    background-color:#8080ff;
+
+}
+#answers button:hover{
+    background-color:#5454ce;
 }
 
-button{
-    text-align: center;
-    width: 95px;
-    height: 50px;
+#answers button:disabled{
+    background-color:#8080ff;
 }
 
 #prize img{
     border: none;
-}
-
-p{
-    margin-bottom: 6px;
 }

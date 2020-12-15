@@ -1,0 +1,55 @@
+/* Tekijä: Alina Zinchenko*/
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+figcaption {
+    padding-left: 1.5em;
+}
+
+h3 {
+    text-decoration: underline dotted;
+    margin-top: 10px;
+}
+
+.questions {
+    margin: 1em;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+/* Vastausten asetukset*/
+.valittu {
+    font-weight: bold;
+}
+
+.oikein {
+    background-color: #47d147;
+    color: white;
+}
+
+.väärin {
+    background-color: #ff3333;
+}
+
+/* Kuvat */
+
+.piilossa {
+    display: none;
+}
+
+.palkinto {
+    color: gold;
+}
+
+.yhteenveto {
+    margin: auto;
+    width: 60%;
+}
+
+.kuvat { 
+    max-height: 200px;
+}

@@ -1,5 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap');
 
 
+
+
+/* MAANTIETO 1 */
+
+body, html {
+    height: 100%; 
+  }
+
+.mantsa {
+height: 100%; /* Tämä kuuluu Maantieto 2:een, mutta toimivuuden vuoksi pitää jättää se tähän */
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+opacity: 1 !important;
+}
 
 label:hover {
     font-weight: bold;
@@ -12,60 +29,154 @@ label:hover {
     border-color: black;
 }
 
+/* Oikein/väärin */
 .vihreä {
-    background-color: #40bf40;
-  
+    background-color: #40bf40;  
 }
 
 .punainen {
-    background-color: #ff3333;
-    
+    background-color: #ff3333;    
 }
 
+/* Arvosana-painikkeen värit */ 
 .valkoinen {
     color: white;
-}
-
-.valinta {
-    background-color: rosybrown;
 }
 
 .btn-purple {
     background-color: #9c33ff;
     color: white;
-
 }
 
+/* Arvosana (tähdet modal-ikkunassa) */
 .big_font  {
     font-size: 60px;
-    
 }
 
 .fa-star {
     color: yellow
-
 }
 
 .fa-star-o {
     color: yellow;
 }
 
-#tulokset {
-    background-color: white;
-    border-radius: 20px;
-    border-style: dotted;
-    border-color: black;
-
-}
-
-
-
+/* Kysymykset alleviivattu */
 h4 {
-    text-decoration: underline;
-    
+    text-decoration: underline;    
 }
 
+/* Visan reunat pyöristetty */
 form {
     border-radius: 10px;
 }
 
+
+
+
+
+/* MAANTIETO 2 */
+
+/* Elementtien piilottaminen */
+.piilossa {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Visan rakenne */
+.visa {
+    border-radius: 50px;
+    border-style:solid;
+    border-color: #ccccff;
+    border-width: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.radio-inline {
+    margin-left: 40px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.radio-inline:hover {
+    cursor: pointer;
+}
+
+#taustakuva {
+background-image: url("../img/kartta.png");
+height: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+border-style: solid;
+border-width: 5px;
+border-color: white;
+}
+
+/* Teksti ennen visan aloittamista */
+.introteksti {
+    color: black;
+    font-weight: bold;
+}
+
+/* Kysymyksille ja vastausvaihtoehdoille taustaväri */
+.mantsa label,
+.mantsa h5
+{
+background-color: black;
+border-radius: 10px;
+}
+
+.btn-tausta {
+    background-color: white;
+    font-weight: bolder;
+}
+
+/* Loppunäkymä */
+#yhteenveto {
+    height: 100%;
+    left: 0%;
+    text-align: left !important;
+    color: black;
+    background-color: white;
+    border-radius: 50px ;
+    opacity: 1; 
+}
+
+#lopputulos {
+    color: black;
+    background: white;
+    opacity: 1 !important;
+    padding: 10px;
+}
+
+
+/* FA-symbolit */
+.fa-times { /*väärin*/
+    color: #ff3333;
+}
+
+.fa-check { /*oikein*/
+    color: #40bf40;
+}
+
+.selitys { /*lisätieto-painikkeen värit*/
+    color: gray;
+}
+
+.selitys:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/* Teksti, joka lopussa ilmoittaa, montako sai oikein */
+.fontti {
+    font-family: 'Bitter', serif;
+    font-size: xx-large;
+}
