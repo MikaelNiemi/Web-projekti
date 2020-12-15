@@ -61,20 +61,24 @@
             </div>
         </header>
         <section class="p-2">
-        <section class="row mx-auto mt-1 section-transparent">
+        <section class="row mx-auto mt-1">
             <div id="intro" class="m-md-2 row col-12">
                 <h3 class="col-12 mt-2 text-center"><i class="fa fa-globe" aria-hidden="true">
                     </i> Maantieto-visa 2 <i class="fa fa-globe" aria-hidden="true"></i></h3>
             </div>
         </section>
 
+        <!-- Visa alkaa tästä -->
         <section class="d-flex justify-content-center row visa p-md-4" id="taustakuva">
+            <!-- Alkuteksti ennen ensimmäistä kysymystä -->
             <div id="alku" class="mantsa col-12 text-center row">
                 <p class="introteksti col-12 mb-2"><b>Tämä visa testaa tietämystäsi eri maista.</b> 
                     Kysymyksiä on yhteensä viisi, vastaat niihin yksi kerrallaan.</p>
+                  <!-- Aloita visa-painike   -->
                 <button id="aloita" type="button" class="mt-3 btn btn-tausta">Aloita visa</button>
             </div>
 
+<!-- Kysymys 1 -->
             <div id="kysymys1" class="mantsa piilossa col-12 text-center row">
                 <h5 class="col-12 text-center">1/5. Mikä on Latvian pääkaupunki?</h5>
                 <label class="radio-inline"><input type="radio" name="optradio" value="oikein">Riika</label>
@@ -82,13 +86,15 @@
                 <label class="radio-inline"><input type="radio" name="optradio" value="">Vilna</label>
             </div>
 
+<!-- Kysymys 2 -->
             <div id="kysymys2" class="mantsa piilossa text-center row col-12">
                 <h5 class="col-12 text-center">2/5. Mikä on Espanjan valuutta?</h5>
                 <label class="radio-inline"><input type="radio" name="optradio" value="">Peso</label>
                 <label class="radio-inline"><input type="radio" name="optradio" value="">Rupla</label>
                 <label class="radio-inline"><input type="radio" name="optradio" value="oikein">Euro</label>
             </div>
-            
+
+<!-- Kysymys 3 -->
             <div id="kysymys3" class="mantsa piilossa text-center row col-12">
                 <h5 class="col-12 text-center">3/5. Mihin maanosaan kuuluu Argentiina?</h5>
                 <label class="radio-inline"><input type="radio" name="optradio" value="">Afrikka</label>
@@ -96,6 +102,7 @@
                 <label class="radio-inline"><input type="radio" name="optradio" value="">Eurooppa</label>
             </div>
 
+ <!-- Kysymys 4 -->
             <div id="kysymys4" class="mantsa piilossa text-center row col-12">
                 <h5 class="col-12 text-center">4/5. Mikä näistä maista ei kuulu Suomen rajanaapureihin?</h5>
                 <label class="radio-inline"><input type="radio" name="optradio" value="">Venäjä</label>
@@ -103,6 +110,7 @@
                 <label class="radio-inline"><input type="radio" name="optradio" value="oikein">Tanska</label>
             </div>
 
+<!-- Kysymys 5  -->
             <div id="kysymys5" class="mantsa piilossa text-center row col-12">
                 <h5 class="col-12 text-center">5/5. Millä näistä maista on suurin pinta-ala?</h5>
                 <label class="radio-inline"><input type="radio" name="optradio" value="oikein">Venäjä</label>
@@ -110,10 +118,16 @@
                 <label class="radio-inline"><input type="radio" name="optradio" value="">Yhdysvallat</label>
             </div>
 
+            <!-- Loppunäkymä -->
             <div id="yhteenveto" class="col-12 row piilossa py-4">
-                <p id="lopputulos" class="text-center col-12"></p>
+
+                <!-- "Sait yhteensä X/5 oikein!" -->
+                <p id="lopputulos" class="fontti text-center col-12"></p>
+
+                <!-- Pokaalin kuva -->
                 <figure id="palkinto" class="piilossa img-fluid text-center col-12 col-md-3 d-inline"></figure>
                 
+                <!-- Vastaus ja mahdollinen korjaus sekä lisätietopainike riveittäin -->
                 <div class="row col">
                     <p id="oma0" class="col-12 col-md-6"></p>
                     <p id="oikea0" class="col-12 col-md-6"></p>
@@ -133,7 +147,8 @@
                 <p class="col-12 d-flex justify-content-end">Lisätietoa &nbsp;<i class="fa fa-info-circle selitys" 
                     aria-hidden="true"></i> -painikkeesta</p>
             </div>
-            
+             
+            <!-- Lopeta visa- ja Seuraava-painikkeet -->
             <button id="lopeta_visa" type="button" class="mt-3 btn btn-tausta piilossa">Lopeta visa</button>
             <button id="seuraava" type="button" class="mt-3 btn btn-tausta piilossa" disabled>Seuraava</button>
         </section>
