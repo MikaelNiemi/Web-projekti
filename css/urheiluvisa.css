@@ -1,31 +1,77 @@
 /* Urheiluvisan css 
  Jani Leskela*/
- main{
-     padding: 10px 10px 10px 10px;
- }
+
+ /* Fontti Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    background-color: #e6ccff;
+}
+
+main {
+    background-color: #ccffff;
+    font-family: 'Lato', sans-serif;
+    max-width: 1200px;
+    padding: 20px 10px 10px 10px;
+}
+
+h1 {
+    color: #8080ff;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+section {
+    background-color: #ccccff;
+    border-radius: 10px;
+}
+
+.navbar {
+    background-color: #8080ff !important;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.dropdown-menu {
+    background-color: #8080ff !important;
+}
+
+.nav-link,
+.dropdown-item {
+    color: gold !important;
+}
+
  div {
      margin-left: 5px ;
  }
- .selected{
-     background-color: grey;
-     color: white;
- }
+
  .wrong {
      background-color: red;
+     border-radius: 5px;
  }
  .right{
      background-color: rgb(42, 201, 42);
+     border-radius: 5px;
+ }
+ .bold{
+     font-weight: bold;
  }
 
  .not_visible{
-     display: none;
+    display: none;
+    border: 1px solid #8080ff;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #ccffff;
  }
  ul{
-     list-style-type: none;
+    list-style-type: none;
     margin: 1px;
     padding: 1px;
  }
  label{
-     width: 8em;
+    width: 8em;
  }
- 
+button{
+    width: 9em;
+}
