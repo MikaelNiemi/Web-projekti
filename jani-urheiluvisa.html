@@ -61,32 +61,34 @@
             <div class="col-12 text-left">
             <h2>Urheiluvisa</h2>
             
-            <p>Urheiluvisassa esitetään 5 urheiluun liittyvää kysymystä. Jokaiseen kysymykseen on yksi oikea vastaus. Vastaus vaihtoehtoja on kolme.
+           <p>Urheiluvisassa esitetään 5 urheiluun liittyvää kysymystä. Jokaiseen kysymykseen on yksi oikea vastaus. Vastaus vaihtoehtoja on kolme.
             </p>
             <p> Kysymykseen vastaamisen jälkeen käyttäjälle kerrotaan oliko vastaus oikein vai väärin.
-                 Mikäli vastaus oli väärin, käyttäjälle osoitetaan oikea vastaus. Vastauksen vaihtaminen ei ole mahdollista.
+                 Mikäli vastauksesi oli väärin, sinulle osoitetaan oikea vastaus lihavoimalla se. Vastauksen vaihtaminen ei ole mahdollista.
             </p>
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12">
         <section>
 
             <p> <b> Kysymys 1.</b> <br> Missä näistä urheilulajeista pallossa on reikiä?</p>
             
             <ul>
                 <li>
-                    <input type="radio" name="kysymys1" id="uk1a" class="choice">
-                    <label for="uk1">Salibandy</label>
+                    <input type="radio" name="kysymys1" id="uk1a" class="choice" value="1">
+                    <label for="uk1a">Salibandy</label>
                 </li>
                 <li>
-                    <input type="radio" name="kysymys1" id="uk2a" class="choice">
+                    <input type="radio" name="kysymys1" id="uk2a" class="choice" value="0">
                     <label for="uk2a">Pesäpallo</label>
                 </li>
                 <li>
-                    <input type="radio" name="kysymys1" id="uk3a" class="choice">
+                    <input type="radio" name="kysymys1" id="uk3a" class="choice" value="0">
                     <label for="uk3a">Koripallo</label>
                 </li>
             </ul>
+            <p class="not_visible" id="kysymys1">
+             Oikea vastaus on salibandy. Salibandypallossa on useita reikiä</p>
           </section>
 
           <section>
@@ -94,18 +96,20 @@
             
             <ul>
                 <li>
-                    <input type="radio" name="kysymys2" id="uk1b" class="choice">
+                    <input type="radio" name="kysymys2" id="uk1b" class="choice" value="1">
                     <label for="uk1b">Jalkapallo</label>
                 </li>
                 <li>
-                    <input type="radio" name="kysymys2" id="uk2b" class="choice">
+                    <input type="radio" name="kysymys2" id="uk2b" class="choice" value="0">
                     <label for="uk2b">Ringette</label>
                 </li>
                 <li>
-                    <input type="radio" name="kysymys2" id="uk3b" class="choice">
+                    <input type="radio" name="kysymys2" id="uk3b" class="choice" value="0">
                     <label for="uk3b">Lentopallo</label>
                 </li>
             </ul>
+            <p class="not_visible" id="kysymys2">
+            Oikea vastaus on jalkapallo. Lentopallossa on 3 erää ja ringetessä pelivälineenä kuminen rengas.</p>
           </section>
 
           <section>
@@ -113,60 +117,75 @@
             
             <ul>
                 <li>
-                    <input type="radio" name="kysymys3" id="uk1c" class="choice">
+                    <input type="radio" name="kysymys3" id="uk1c" class="choice" value="0">
                     <label for="uk1c">Jääkiekko</label>
                 </li>
                 <li>
-                    <input type="radio" name="kysymys3" id="uk2c" class="choice">
+                    <input type="radio" name="kysymys3" id="uk2c" class="choice" value="1">
                     <label for="uk2c">Koripallo</label>
                 </li>
                 <li>
-                    <input type="radio" name="kysymys3" id="uk3c" class="choice">
+                    <input type="radio" name="kysymys3" id="uk3c" class="choice" value="0">
                     <label for="uk3c">Pesäpallo</label>
                 </li>
             </ul>
+            <p class="not_visible" id="kysymys3">
+            Oikea vastaus on koripallo. Donkki tarkoittaa hyppyheittoa, jossa pelaaja heittää pallon alaspäin.</p>
           </section>
+          
           <section>
             <p><b> Kysymys 4.</b> <br>Missä urheilulajissa on lukkari? </p>
             
             <ul>
                 <li>
-                    <input type="radio" name="kysymys4" id="uk1d" class="choice">
+                    <input type="radio" name="kysymys4" id="uk1d" class="choice" value="0">
                     <label for="uk1d">Frisbeegolf</label>
                 </li>
                 <li>
-                    <input type="radio" name="kysymys4" id="uk2d" class="choice">
+                    <input type="radio" name="kysymys4" id="uk2d" class="choice" value="1">
                     <label for="uk2d">Pesäpallo</label>
                 </li>
                 <li>
-                    <input type="radio" name="kysymys4" id="uk3d" class="choice">
+                    <input type="radio" name="kysymys4" id="uk3d" class="choice" value="0">
                     <label for="uk3d">Jalkapallo</label>
                 </li>
             </ul>
+            <p class="not_visible" id="kysymys4">
+            Oikea vastaus on pesäpallo. Pesäpallossa kotipesässä olevaa syöttäjää kutsutaan lukkariksi.</p>
           </section>
+          
           <section>
             <p><b>Kysymys 5.</b> <br>Missä näistä urheilulajeista pelivälineenä on kiekko? </p>
             
             <ul>
                 <li>
-                    <input type="radio" name="kysymys5" id="uk1e" class="choice">
+                    <input type="radio" name="kysymys5" id="uk1e" class="choice" value="0">
                     <label for="uk1e">Ringette</label>
                 </li>
                 <li>
-                    <input type="radio" name="kysymys5" id="uk2e" class="choice">
+                    <input type="radio" name="kysymys5" id="uk2e" class="choice" value="0">
                     <label for="uk2e">Jääpallo</label>
                 </li>
                 <li>
-                    <input type="radio" name="kysymys5" id="uk3e" class="choice">
+                    <input type="radio" name="kysymys5" id="uk3e" class="choice" value="1">
                     <label for="uk3e">Jääkiekko</label>
                 </li>
             </ul>
+            <p class="not_visible" id="kysymys5">
+                Oikea vastaus on jääkiekko.</p>
             </section>
+        <button type="button" id="tulos" class="btn btn-primary">Näytä tulos</button>
+            <p id="tulostus"></p>
+
+        <button type="button" id="uudestaan" class="btn btn-primary">Yritä uudestaan</button>
         </div>
     </section>
         
     
         <footer class="row mx-auto">
+            <div class="col-12 text-center">
+                <p>Tekijä: Jani Leskelä</p>
+            </div>
 
         </footer>
     </main>
